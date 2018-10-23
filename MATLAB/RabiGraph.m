@@ -4,7 +4,11 @@ Tau = 5e-6;%MHz
 %Rabi = 35e3;%35 kHz Rabi Frequency
 %Rabi = 35e-3;%MHz
 %Detuning = 0.5e6;%.5 MHz Detuning
-Detuning = 1.894;%MHz
+%Need to set it up so the program searches for the ideal Detuning for each
+%Rabi Frequency - Note that the best Detuning only varies by less than 1MHz
+%from 1.89 MHz
+Detuning = 1.89;%MHz
+%Detuning = .1;
 F = 1;
 %Sweep = 1.3655;%MHz/ms 
 Otherlevel = 4.9;
@@ -62,6 +66,9 @@ cb = colorbar;
 %Display the best sweep rate and fidelity for each rabi frequency (kHz)
 format long g;
 RabiSweepIdeal = [Rabi.'*1e3 Sweep(index) ProbIdeal.'];
+[FidelityIdeal, ind] = max(RabiSweepIdeal(:,3));
+RabiIdeal = RabiSweepIdeal(ind, 1);
+SweepIdeal = RabiSweepIdeal(ind, 2);
 
 GateTime = 2*Detuning./Sweep;
 %Make colormap with Rabi vs Gate Time and Fidelity as color
@@ -79,27 +86,27 @@ ax2 = gca;
 ax2.Title.String = 'Optimal Sweeps';
 ax2.Title.FontSize = 25;
 ax2.XScale = 'log';
-ax2.XLabel.String = 'Gate Time (ms)';
+ax2.XLabel.String = 'Passage Time (ms)';
 ax2.XLabel.FontSize = 20;
 ax2.YLabel.String = 'Rabi Frequency (kHz)';
 ax2.YLabel.FontSize = 20;
 % ax.XAxis.TickLabelFormat = '%.1f';
 % ax.XTickLabel = '%.1f';
 % xtickformat('%.1f');
-%ax2.XTickLabel = [0.1 1 10 100];
+ax2.XTickLabel = [0.1 1 10];
 %set(gca,'layer','top');
 %Visible tick lines
 ax2.Layer = 'top';
 %Add colorbar
 cb2 = colorbar;
 hold on;
-p = semilogx(GateTime(index), Rabi.'*1e3);
+IdealGateTimes = GateTime(index);
+p = semilogx(IdealGateTimes, Rabi.'*1e3);
 set(p, 'Color', 'Black');
 
-[ProbIdeal, index] = max(Probs);
 %Display the best sweep rate and fidelity for each rabi frequency (kHz)
 format long g;
-RabiGateTimeIdeal = [Rabi.'*1e3 GateTime(index) ProbIdeal.'];
+RabiGateTimeIdeal = [Rabi.'*1e3 IdealGateTimes ProbIdeal.' Sweep(index)];
 
 % figure(3)
 % semilogx(GateTime(index), Rabi.'*1e3);
@@ -127,7 +134,105 @@ end
 l = legend(Leg, 'Location', 'Southeast');
 ax3.Title.String = 'Rabi Frequency Fidelities';
 ax3.Title.FontSize = 25;
-ax3.XLabel.String = 'Gate Time (ms)';
+ax3.XLabel.String = 'Passage Time (ms)';
 ax3.XLabel.FontSize = 20;
 ax3.YLabel.String = 'Fidelity';
 ax3.YLabel.FontSize = 20;
+ax3.XTickLabel = [0.01 0.1 1 10 100];
+
+figure(4)
+Fidelities = RabiGateTimeIdeal(:,3);
+Rabis = RabiGateTimeIdeal(:,1);
+Num3 = NumPasses(3);
+Num5 = NumPasses(5);
+Num7 = NumPasses(7);
+Num8 = NumPasses(8);
+
+plot(Rabis, Fidelities.^Num3);
+hold on;
+plot(Rabis, Fidelities.^Num5);
+hold on;
+plot(Rabis, Fidelities.^Num7);
+hold on;
+plot(Rabis, Fidelities.^Num8);
+hold on;
+ax4 = gca;
+Leg = {};
+Leg{1} = '3 level';
+Leg{2} = '5 level';
+Leg{3} = '7 level';
+Leg{4} = '8 level';
+l2 = legend(Leg, 'Location', 'Southwest');
+ax4.Title.String = 'Different qudits';
+ax4.Title.FontSize = 25;
+ax4.XLabel.String = 'Rabi Frequency (kHz)';
+ax4.XLabel.FontSize = 20;
+ax4.YLabel.String = 'Fidelity';
+ax4.YLabel.FontSize = 20;
+%ax4.XTickLabel = [0.01 0.1 1 10 100];
+
+figure(5)
+% Fidelities = RabiGateTimeIdeal(:,3);
+% GateTimes = RabiGateTimeIdeal(:,4);
+% Fidelities(Fidelities<.94) = -inf;
+% semilogx(GateTimes, Fidelities);
+% hold on;
+% Fidelities3 = Fidelities.^3;
+% Fidelities3(Fidelities3<.95) = -inf;
+% semilogx(GateTimes.*3, Fidelities3);
+% hold on;
+% Fidelities5 = Fidelities.^5;
+% Fidelities5(Fidelities5<.95) = -inf;
+% semilogx(GateTimes.*5, Fidelities5);
+% hold on;
+% Fidelities7 = Fidelities.^7;
+% Fidelities7(Fidelities7<.95) = -inf;
+% semilogx(GateTimes.*7, Fidelities7);
+% hold on;
+% Fidelities8 = Fidelities.^8;
+% Fidelities8(Fidelities8<.95) = -inf;
+% semilogx(GateTimes.*8, Fidelities8);
+% hold on;
+
+Fidelities = RabiGateTimeIdeal(:,3);
+GateTimes = RabiGateTimeIdeal(:,4);
+% Fidelities(Fidelities<.95) = -inf;
+% plot(GateTimes, Fidelities);
+% hold on;
+Num3 = NumPasses(3);
+Num5 = NumPasses(5);
+Num7 = NumPasses(7);
+Num8 = NumPasses(8);
+
+Fidelities3 = Fidelities.^Num3;
+Fidelities3(Fidelities3<.95) = -inf;
+plot(GateTimes.*Num3, Fidelities3);
+hold on;
+Fidelities5 = Fidelities.^Num5;
+Fidelities5(Fidelities5<.95) = -inf;
+plot(GateTimes.*Num5, Fidelities5);
+hold on;
+Fidelities7 = Fidelities.^Num7;
+Fidelities7(Fidelities7<.95) = -inf;
+plot(GateTimes.*Num7, Fidelities7);
+hold on;
+Fidelities8 = Fidelities.^Num8;
+Fidelities8(Fidelities8<.95) = -inf;
+plot(GateTimes.*Num8, Fidelities8);
+hold on;
+
+ax5 = gca;
+Leg = {};
+%Leg{1} = '1 level';
+Leg{1} = '3 level';
+Leg{2} = '5 level';
+Leg{3} = '7 level';
+Leg{4} = '8 level';
+l3 = legend(Leg, 'Location', 'Southwest');
+ax5.Title.String = 'Different qudits';
+ax5.Title.FontSize = 25;
+ax5.XLabel.String = 'Passage Time (ms)';
+ax5.XLabel.FontSize = 20;
+ax5.YLabel.String = 'Fidelity';
+ax5.YLabel.FontSize = 20;
+%ax5.XTickLabel = [0.1 0.1 1 10];

@@ -16,6 +16,12 @@ ORabi = sqrt(Rabi.^2 + ODetuning^2);
 %Probability of exciting this other level: Using Steck equation 5.60,
 %Assume upper bound for sine function
 OProb = Rabi.^2./ORabi.^2;
-Prob = Fidelity*(1/2 + DephasingExp.*(ProbLZ - 1/2) - 2*StateDetuningError).*(1 - OProb).^2.*(1 - StateDetuningError).^2;
+Prob = Fidelity*(1/2 + DephasingExp.*(ProbLZ - 1/2)).*(1 - OProb).^2.*(1 - StateDetuningError).^2;
+%Phase error, State prep error
+%Prob = Fidelity*(1/2 + DephasingExp.*(ProbLZ - 1/2)).*(1 - StateDetuningError).^2;
+%Phase error, other level coupling
+%Prob = Fidelity*(1/2 + DephasingExp.*(ProbLZ - 1/2)).*(1 - OProb).^2;
+%Prob = Fidelity*(1/2 + DephasingExp.*(ProbLZ - 1/2));
+%Prob = ProbLZ;
 end
 

@@ -2,7 +2,7 @@
 %Tau = 5;%5 Hz Linewidth
 Tau = 5e-6;%MHz
 %Rabi = 35e3;%35 kHz Rabi Frequency
-Rabi = 35e-3;%MHz
+Rabi = 512e-3;%MHz
 %Detuning = 0.5e6;%.5 MHz Detuning
 %Detuning = 0.5;%MHz
 F = 1;
@@ -22,7 +22,8 @@ Detuning = 1e-1:1e-3:4.8e0;%MHz
     %OptSweep(i) = Sweep(find(Probs == max(Probs)));
 %end
 %Sweep = OptSweep(1);
-Sweep = 1.366;
+Sweep = 1.894;
+
 OtherDetuning = Otherlevel-Detuning;
 Probs = Prob2(Tau, Rabi, Sweep, Detuning, F, OtherDetuning);
 OptProb = max(Probs);
