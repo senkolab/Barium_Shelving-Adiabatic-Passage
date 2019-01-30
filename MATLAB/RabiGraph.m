@@ -29,9 +29,15 @@ Rabi = 10e-3:1e-4:200e-3;
 SweepMat = repmat(Sweep, 1, length(Rabi));
 RabiMat = repmat(Rabi, length(Sweep), 1);
 
+DecayTime = 35;
+GateTime = 2*Detuning./Sweep;
+GateTimeSec = 1e-3*GateTime;
+%GateTime = 0;
 
 Probs = Prob3(Tau, RabiMat, SweepMat, Detuning, F, OtherDetuning);
+Probs = Probs.*exp(-GateTimeSec/DecayTime);
 Probs(Probs<.9) = -inf;
+
 
 %Make colormap with Rabi vs Sweeprate and Fidelity as color
 figure(1);
@@ -69,6 +75,7 @@ RabiSweepIdeal = [Rabi.'*1e3 Sweep(index) ProbIdeal.'];
 [FidelityIdeal, ind] = max(RabiSweepIdeal(:,3));
 RabiIdeal = RabiSweepIdeal(ind, 1);
 SweepIdeal = RabiSweepIdeal(ind, 2);
+RabiSweepIdealTime = [Rabi.'*1e3 GateTime(index) ProbIdeal.'];
 
 GateTime = 2*Detuning./Sweep;
 %Make colormap with Rabi vs Gate Time and Fidelity as color
