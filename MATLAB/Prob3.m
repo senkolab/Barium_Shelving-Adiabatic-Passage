@@ -6,6 +6,7 @@ function [Prob] = Prob3(Tau, Rabi, sweep, Detuning, Fidelity, ODetuning)
 Theta = 1/2*atan(Rabi/Detuning);
 %Initial adiabatic state error based on detuning not being infinite
 StateDetuningError = sin(Theta).^2;
+%StateDetuningError = 0;
 %Lander Zanau Probability
 %ProbLZ = 1 - exp(-pi()^2*Rabi^2./sweep);
 ProbLZ = 1 - exp(-pi()^2*Rabi.^2./sweep*1e3);%Sweep in ms units
@@ -15,7 +16,8 @@ DephasingExp = exp(-2*pi()^2*Tau*Rabi./sweep*1e3);%Sweep in ms units
 ORabi = sqrt(Rabi.^2 + ODetuning^2);
 %Probability of exciting this other level: Using Steck equation 5.60,
 %Assume upper bound for sine function
-OProb = Rabi.^2./ORabi.^2;
+OProb = Rabi.^2./(2*ORabi.^2);
+%OProb = 0;
 Prob = Fidelity*(1/2 + DephasingExp.*(ProbLZ - 1/2)).*(1 - OProb).^2.*(1 - StateDetuningError).^2;
 %Phase error, State prep error
 %Prob = Fidelity*(1/2 + DephasingExp.*(ProbLZ - 1/2)).*(1 - StateDetuningError).^2;

@@ -20,7 +20,7 @@ OtherDetuning = Otherlevel-Detuning;
 % Sweep4 = 1:1e-4:1e2;
 % Sweep5 = 1e2:1e-3:1e3;
 % Sweep = 1e-1:1e-2:1e2;
-Sweep = logspace(-1, 2, 1000);
+Sweep = logspace(-1, 2, 10000);
 Sweep = Sweep.';
 
 
@@ -210,9 +210,9 @@ GateTimes = RabiGateTimeIdeal(:,4);
 %Num5 = NumPasses(5);
 %Num7 = NumPasses(7);
 %Num8 = NumPasses(8);
-Num3 = 4;
-Num5 = 8;
-Num7 = 12;
+Num3 = 3;
+Num5 = 5.5;
+Num7 = 8.5;
 
 Fluorescence3 = 2;
 Fluorescence5 = 4;
@@ -231,7 +231,7 @@ TotalfTime7 = FluorescenceTime*Fluorescence7;
 
 Fidelities3 = Fidelities.^Num3;
 Fidelities3(Fidelities3<.95) = -inf;
-plot(GateTimes.*Num3 + TotalfTime3, Fidelities3);
+semilogx(GateTimes.*Num3 + TotalfTime3, Fidelities3);
 hold on;
 Fidelities5 = Fidelities.^Num5;
 Fidelities5(Fidelities5<.95) = -inf;
@@ -254,10 +254,11 @@ Leg{2} = '5 level';
 Leg{3} = '7 level';
 %Leg{4} = '8 level';
 l3 = legend(Leg, 'Location', 'Southwest');
-ax5.Title.String = 'Different qudits';
+ax5.Title.String = 'Qudit measurement fidelity';
 ax5.Title.FontSize = 25;
 ax5.XLabel.String = 'Measurement Time (ms)';
 ax5.XLabel.FontSize = 20;
 ax5.YLabel.String = 'Fidelity';
 ax5.YLabel.FontSize = 20;
+ylim([.96 1]);
 %ax5.XTickLabel = [0.1 0.1 1 10];
