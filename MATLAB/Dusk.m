@@ -1,0 +1,11 @@
+function [Dusk] = Dusk(n)
+Topa = n;
+Topb = (n - (1/254)*n);
+Topc = n;
+Bota = n*56/255;
+Botb = 0;
+Botc = n*58/255;
+Duska = linspace(Topa, Bota, n).';
+Duskb = linspace(Topb, Botb, n).';
+Duskc = linspace(Topc, Botc, n).';
+Dusk = [Duska Duskb Duskc]/n;
