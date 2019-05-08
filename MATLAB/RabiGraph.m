@@ -246,18 +246,25 @@ Fidelities3 = Fidelities.^Num3;
 Fidelities3(Fidelities3<Thresh) = -inf;
 Lev3 = semilogx(TotalTime3, Fidelities3);
 hold on;
+set(Lev3, 'Linewidth', 1.5, 'Color', [128 0 132]/255);
+
 Fidelities5 = Fidelities.^Num5;
 Fidelities5(Fidelities5<Thresh) = -inf;
 Lev5 = plot(TotalTime5, Fidelities5);
 hold on;
+set(Lev5, 'Linestyle', '-.', 'Linewidth', 1.5, 'Color', [0 133 93]/255);
+
 Fidelities7 = Fidelities.^Num7;
 Fidelities7(Fidelities7<Thresh) = -inf;
 Lev7 = plot(TotalTime7, Fidelities7);
 hold on;
+set(Lev7, 'Linestyle', '--', 'Linewidth', 1.5, 'Color', [19 14 141]/255);
+
 %Fidelities8 = Fidelities.^Num8;
 %Fidelities8(Fidelities8<.95) = -inf;
 %plot(GateTimes.*Num8, Fidelities8);
 %hold on;
+
 %set(LevRight, 'line
 ax5 = gca;
 Leg = {};
@@ -271,15 +278,13 @@ ax5.Title.String = 'Qudit measurement fidelity';
 ax5.Title.FontSize = 20;
 ax5.XLabel.String = 'Measurement Time (ms)';
 ax5.XLabel.FontSize = 12;
-ax5.XTickLabel = [0.1 1 10 100 1000];
 ax5.YLabel.String = 'Fidelity';
 ax5.YLabel.FontSize = 12;
 ylim([.975 1]);
-set(Lev3, 'Linewidth', 1.5, 'Color', [128 0 132]/255);
-set(Lev5, 'Linestyle', '-.', 'Linewidth', 1.5, 'Color', [0 133 93]/255);
-set(Lev7, 'Linestyle', '--', 'Linewidth', 1.5, 'Color', [19 14 141]/255);
-set(ax5, 'YTick', 0:0.005:1, 'YMinorTick', 'on', 'TickDir', 'out', 'YGrid', 'on', 'XGrid', 'on')
-%ax5.XTickLabel = [0.1 0.1 1 10];
+set(ax5, 'YTick', 0:0.005:1,...
+    'YMinorTick', 'on', 'TickDir', 'out',...
+    'YGrid', 'on', 'XGrid', 'on',...
+    'XTickLabel', [0.1 1 10 100 1000])
 % yyaxis right;
 % Size = size(Fidelities7(Fidelities7 ~= -Inf)');
 % TotalTime7Small = TotalTime7(1:Size(2), :);
@@ -287,11 +292,13 @@ set(ax5, 'YTick', 0:0.005:1, 'YMinorTick', 'on', 'TickDir', 'out', 'YGrid', 'on'
 % LevRight = plot(TotalTime7Small, RabisSmall);
 % set(LevRight, 'Color', 'none', 'HandleVisibility', 'off');
 % ylabel('Rabi Frequency');
-ax6 = axes('Position',get(ax5,'Position'),...
-            'XAxisLocation','top',...
-            'YAxisLocation','left',...
-            'Color','none',...
-            'XColor','k','YColor','k');
-LevTop = semilogx(Rabis, Fidelities7);
+%ax6 = axes('Position',ax5.Position,...
+%             'XAxisLocation','top',...
+%             'YAxisLocation','right',...
+%             'Color','none',...
+%             'XColor','k','YColor','k',...
+%             'XScale', 'log', 'XDir', 'reverse');
+%LevTop = semilogx(Rabis, Fidelities7);
+%line(Rabis,Fidelities7,'Parent',ax6,'Color','k');
 %linkaxes([ax5 ax6],'xy');
-ylim([0.975, 1]);
+%ylim([0.975, 1]);

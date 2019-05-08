@@ -18,6 +18,7 @@ ORabi = sqrt(Rabi.^2 + ODetuning^2);
 %Assume upper bound for sine function
 OProb = Rabi.^2./(2*ORabi.^2);
 %OProb = 0;
+%OProb = 0;
 Prob = Fidelity*(1/2 + DephasingExp.*(ProbLZ - 1/2)).*(1 - OProb).^2.*(1 - StateDetuningError).^2;
 %Phase error, State prep error
 %Prob = Fidelity*(1/2 + DephasingExp.*(ProbLZ - 1/2)).*(1 - StateDetuningError).^2;
