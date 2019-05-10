@@ -1,7 +1,7 @@
 clearvars
 %Constants of the experiment
 %Tau = 5;%5 Hz Linewidth
-Linewidth = 1e-6;%MHz
+Tau = 1e-6;%MHz
 %Rabi = 35e3;%35 kHz Rabi Frequency
 %Rabi = 35e-3;%MHz
 %Detuning = 0.5e6;%.5 MHz Detuning
@@ -35,9 +35,9 @@ GateTime = 2*Detuning./Sweep;
 GateTimeSec = 1e-3*GateTime;
 %GateTime = 0;
 
-Probs = Prob3(Linewidth, RabiMat, SweepMat, Detuning, F, OtherDetuning);
+Probs = Prob3(Tau, RabiMat, SweepMat, Detuning, F, OtherDetuning);
 Probs = Probs.*exp(-GateTimeSec/DecayTime);
-Probs(Probs<.97) = -inf;
+Probs(Probs<.95) = -inf;
 
 
 % %Make colormap with Rabi vs Sweeprate and Fidelity as color
@@ -87,8 +87,6 @@ colormap(brewermap(4000, 'BuPu'));
 h2 = pcolor(GateTime, Rabi*1e3, Probs.');
 %No gridlines
 set(h2, 'EdgeColor', 'none');
-%Set background color white
-set(gcf,'color','white');
 %title('Optimal Sweeps', 'Fontsize', 25);
 %xlabel('Sweep Rate \alpha (MHz/ms)', 'Fontsize', 20);
 %ylabel('Rabi Frequency (kHz)', 'Fontsize', 20);
@@ -112,8 +110,8 @@ ax2.Layer = 'top';
 cb2 = colorbar;
 hold on;
 IdealGateTimes = GateTime(index);
-p = semilogx(IdealGateTimes, Rabi.'*1e3, 'Color', [192, 192, 192]/255);
-%set(p, 'Color', [128, 128, 128]);
+p = semilogx(IdealGateTimes, Rabi.'*1e3);
+set(p, 'Color', 'Black');
 set(ax2, 'TickDir', 'out','YGrid', 'on', 'XGrid', 'on');
 
 %Display the best sweep rate and fidelity for each rabi frequency (kHz)
@@ -230,7 +228,7 @@ Angle = asin(NA);
 PercentCollected = sin(Angle/2)^2;
 QE = 0.8;
 P12Lifetime = 7.92e-9;
-SaturationFluorescenceFreq = 1/(2*2*pi()*P12Lifetime);
+SaturationFluorescenceFreq = 1/P12Lifetime;
 AssumedFluorescenceFreq = SaturationFluorescenceFreq/2;
 DetectionRate = AssumedFluorescenceFreq*PercentCollected*QE;
 PhotonsToCollect = 10;
@@ -269,8 +267,7 @@ set(Lev7, 'Linestyle', '--', 'Linewidth', 1.5, 'Color', [19 14 141]/255);
 %Fidelities8(Fidelities8<.95) = -inf;
 %plot(GateTimes.*Num8, Fidelities8);
 %hold on;
-%Set background color white
-set(gcf,'color','white');
+
 %set(LevRight, 'line
 ax5 = gca;
 Leg = {};
