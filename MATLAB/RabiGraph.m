@@ -1,44 +1,35 @@
 clearvars
 %Constants of the experiment
 %Tau = 5;%5 Hz Linewidth
-Linewidth = 1e-6;%MHz
-%Rabi = 35e3;%35 kHz Rabi Frequency
-%Rabi = 35e-3;%MHz
+Linewidth = 1;
 %Detuning = 0.5e6;%.5 MHz Detuning
 %Need to set it up so the program searches for the ideal Detuning for each
 %Rabi Frequency - Note that the best Detuning only varies by less than 1MHz
 %from 1.89 MHz
-Detuning = 1.89;%MHz
+Detuning = 1.9e6;%MHz
 %Detuning = .1;
 F = 1;
 %Sweep = 1.3655;%MHz/ms 
-Otherlevel = 4.9;
-OtherDetuning = Otherlevel-Detuning;
+Otherlevel = 4.9e6;
+AdjDetuning = Otherlevel-Detuning;
 
-% Sweep1 = 1e-3:1e-7:1e-2;
-% Sweep2 = 1e-2:1e-6:1e-1;
-% Sweep3 = 1e-1:1e-5:1;
-% Sweep4 = 1:1e-4:1e2;
-% Sweep5 = 1e2:1e-3:1e3;
-% Sweep = 1e-1:1e-2:1e2;
-Sweep = logspace(-1, 2, 1000);
+Sweep = logspace(8, 11, 1000);
 Sweep = Sweep.';
 
+Rabi = 10e3:1e2:200e3;
 
-Rabi = 10e-3:1e-4:200e-3;
-
+%Make a bunch of copies of the sweep rates and rabi freqs
 SweepMat = repmat(Sweep, 1, length(Rabi));
 RabiMat = repmat(Rabi, length(Sweep), 1);
 
 DecayTime = 35;
-GateTime = 2*Detuning./Sweep;
-GateTimeSec = 1e-3*GateTime;
-%GateTime = 0;
-
-Probs = Prob3(Linewidth, RabiMat, SweepMat, Detuning, F, OtherDetuning);
-Probs = Probs.*exp(-GateTimeSec/DecayTime);
-Probs(Probs<.97) = -inf;
-
+TransferTime = 2*Detuning./Sweep;
+%Calculate transfer probabilities
+Probs = Prob3(Linewidth, RabiMat, SweepMat, Detuning, F, AdjDetuning);
+%Take into account metastable decay
+Probs = Probs.*exp(-TransferTime/DecayTime);
+ProbabilityCutoff = 0.97;
+Probs(Probs<ProbabilityCutoff) = -inf;
 
 % %Make colormap with Rabi vs Sweeprate and Fidelity as color
 % figure(1);
@@ -69,6 +60,8 @@ Probs(Probs<.97) = -inf;
 % %Add colorbar
 % cb = colorbar;
 
+
+%Setup ideal plot to put over colormap
 [ProbIdeal, index] = max(Probs);
 %Display the best sweep rate and fidelity for each rabi frequency (kHz)
 format long g;
@@ -76,15 +69,15 @@ RabiSweepIdeal = [Rabi.'*1e3 Sweep(index) ProbIdeal.'];
 [FidelityIdeal, ind] = max(RabiSweepIdeal(:,3));
 RabiIdeal = RabiSweepIdeal(ind, 1);
 SweepIdeal = RabiSweepIdeal(ind, 2);
-RabiSweepIdealTime = [Rabi.'*1e3 GateTime(index) ProbIdeal.'];
+RabiSweepIdealTime = [Rabi.' TransferTime(index) ProbIdeal.'];
 
-GateTime = 2*Detuning./Sweep;
+
 %Make colormap with Rabi vs Gate Time and Fidelity as color
 figure(2);
 %Smoother colors
 colormap(brewermap(4000, 'BuPu'));
 %colormap(jet(4000));
-h2 = pcolor(GateTime, Rabi*1e3, Probs.');
+h2 = pcolor(TransferTime, Rabi, Probs.');
 %No gridlines
 set(h2, 'EdgeColor', 'none');
 %Set background color white
@@ -111,8 +104,8 @@ ax2.Layer = 'top';
 %Add colorbar
 cb2 = colorbar;
 hold on;
-IdealGateTimes = GateTime(index);
-p = semilogx(IdealGateTimes, Rabi.'*1e3, 'Color', [192, 192, 192]/255);
+IdealGateTimes = TransferTime(index);
+p = semilogx(IdealGateTimes, Rabi.', 'Color', [192, 192, 192]/255);
 %set(p, 'Color', [128, 128, 128]);
 set(ax2, 'TickDir', 'out','YGrid', 'on', 'XGrid', 'on');
 
