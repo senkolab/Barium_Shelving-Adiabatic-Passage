@@ -1,5 +1,5 @@
 clearvars
-addpath('..\Functions', '..\plotxx', '..\Figures', '..\DrosteEffect-BrewerMap-b6a6efc');
+addpath('..\Functions', '..\plotxx', '..\Figures', '..\DrosteEffect-BrewerMap-b6a6efc', '..\altmany-export_fig-9502702');
 %Constants of the experiment
 %Tau = 5;%5 Hz Linewidth
 Linewidth = 1;
@@ -269,15 +269,20 @@ Leg{1} = '3 level';
 Leg{2} = '5 level';
 Leg{3} = '7 level';
 %Leg{4} = '8 level';
-l3 = legend(Leg, 'Location', 'Northeast');
+l3 = legend(Leg, 'Location', 'Northeast','FontSize',14);
 ax5.Title.String = 'Qudit measurement fidelity';
-ax5.Title.FontSize = 20;
+ax5.Title.FontSize = 30;
 ax5.XLabel.String = 'Total measurement time (ms)';
-ax5.XLabel.FontSize = 12;
+ax5.XLabel.FontSize = 20;
 ax5.YLabel.String = 'Fidelity';
-ax5.YLabel.FontSize = 12;
+ax5.YLabel.FontSize = 20;
 ylim([.975 1]);
 set(ax5, 'YTick', 0:0.005:1,...
     'YMinorTick', 'on', 'TickDir', 'out',...
     'YGrid', 'on', 'XGrid', 'on',...
     'XTickLabel', [0.1 1 10 100 1000])
+set(gcf, 'Position', [100 100 600 500]);
+%set(gcf, 'Renderer', 'opengl');
+%saveas(gcf, 'Overall_Measurement.pdf');
+%export_fig Overall_Measurement.pdf
+%export_fig('Overall-Measurement.pdf', '-pdf', '-opengl')

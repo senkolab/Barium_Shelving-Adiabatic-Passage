@@ -1,5 +1,5 @@
 clearvars
-addpath('..\Functions', '..\plotxx', '..\Figures', '..\DrosteEffect-BrewerMap-b6a6efc');
+addpath('..\Functions', '..\plotxx', '..\Figures', '..\DrosteEffect-BrewerMap-b6a6efc', '..\altmany-export_fig-9502702', '..\masumhabib-PlotPub-fe51157\lib','..\masumhabib-PlotPub-fe51157\examples' );
 %Constants of the experiment
 %Tau = 5;%5 Hz Linewidth
 Linewidth = 1;
@@ -48,7 +48,7 @@ RabiSweepIdealTime = [Rabi.' TransferTime(index) ProbIdeal.'];
 
 
 %Make colormap with Rabi vs Gate Time and Fidelity as color
-figure(2);
+fig = figure(5);
 %Smoother colors
 colormap(brewermap(4000, 'BuPu'));
 %colormap(jet(4000));
@@ -63,12 +63,12 @@ set(gcf,'color','white');
 %set(gca, 'XScale', 'log');
 ax2 = gca;
 ax2.Title.String = 'Optimal sweeps';
-ax2.Title.FontSize = 20;
+ax2.Title.FontSize = 30;
 ax2.XScale = 'log';
 ax2.XLabel.String = 'Passage time (ms)';
-ax2.XLabel.FontSize = 12;
+ax2.XLabel.FontSize = 20;
 ax2.YLabel.String = 'Rabi frequency (kHz)';
-ax2.YLabel.FontSize = 12;
+ax2.YLabel.FontSize = 20;
 % ax.XAxis.TickLabelFormat = '%.1f';
 % ax.XTickLabel = '%.1f';
 % xtickformat('%.1f');
@@ -80,9 +80,14 @@ ax2.Layer = 'top';
 cb2 = colorbar;
 hold on;
 IdealGateTimes = TransferTime(index);
-p = semilogx(IdealGateTimes, Rabi.'*1e-3, 'Color', [192, 192, 192]/255);
+p = semilogx(IdealGateTimes, Rabi.'*1e-3, 'Color', [192, 192, 192]/255,'LineWidth',2);
 %set(p, 'Color', [128, 128, 128]);
 set(ax2, 'TickDir', 'out','YGrid', 'on', 'XGrid', 'on');
+set(gcf, 'Position', [100 100 600 500]);
+%saveas(gcf, 'Population_Transfer_Adiabatic.pdf');
+%export_fig Population_Transfer_Adiabatic.pdf 
+%export_fig('Population_Transfer_Adiabatic.pdf', '-pdf', '-opengl')
+
 
 %Display the best sweep rate and fidelity for each rabi frequency (kHz)
 format long g;
