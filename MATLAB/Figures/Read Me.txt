@@ -1,0 +1,15 @@
+Only PopulationTransfer_Adiabatic4 and Overall-Measurement4 are up to date! 
+Running the matlab programs generates these figures
+
+Overall-Measurement2 
+Just assuming off-resonant coupling to a single level, and initial detuning 
+set at midway to that level
+
+Overall-Measurement3 and Population_Transfer_Adiabatic3 
+Assume off-resonant coupling to all levels, with clebsch gordan
+coefficients taken into account (incorrectly for different F's), and the detuning set 
+much closer to the nearest level
+
+Overall-Measurement4 has off-resonant coupling to all levels with correct clebsch gordan 
+coefficients
+
