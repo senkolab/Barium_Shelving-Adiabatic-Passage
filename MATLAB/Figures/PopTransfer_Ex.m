@@ -95,10 +95,11 @@ set(gcf,'color','white');
 %ylabel('Rabi Frequency (kHz)', 'Fontsize', 20);
 %set(gca, 'XScale', 'log');
 ax2 = gca;
-ax2.Title.String = 'Optimal sweeps';
-ax2.Title.FontSize = 30;
+% ax2.Title.String = 'Optimal sweeps';
+% ax2.Title.FontSize = 30;
 ax2.XScale = 'log';
 ax2.XLabel.String = 'Passage time (ms)';
+ax2.FontSize = 14;
 ax2.XLabel.FontSize = 20;
 ax2.YLabel.String = 'Rabi frequency (kHz)';
 ax2.YLabel.FontSize = 20;
@@ -117,9 +118,11 @@ p = semilogx(IdealGateTimes, Rabi.'*1e-3, 'Color', [192, 192, 192]/255,'LineWidt
 %set(p, 'Color', [128, 128, 128]);
 set(ax2, 'TickDir', 'out','YGrid', 'on', 'XGrid', 'on');
 set(gcf, 'Position', [100 100 600 500]);
+colorTitleHandle = get(cb2,'Title');
+set(colorTitleHandle ,'String','Fidelity');
 %saveas(gcf, 'Population_Transfer_Adiabatic.pdf');
 %export_fig Population_Transfer_Adiabatic.pdf 
-%export_fig('Population_Transfer_Adiabatic4.pdf', '-pdf', '-opengl')
+%export_fig('Population_Transfer_Adiabatic5.pdf', '-pdf', '-opengl')
 
 
 %Display the best sweep rate and fidelity for each rabi frequency (kHz)

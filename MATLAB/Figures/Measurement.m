@@ -462,8 +462,9 @@ Leg{2} = '5 level';
 Leg{3} = '7 level';
 %Leg{4} = '8 level';
 l3 = legend(Leg, 'Location', 'Northeast','FontSize',14);
-ax5.Title.String = 'Qudit measurement fidelity';
-ax5.Title.FontSize = 30;
+%ax5.Title.String = 'Qudit measurement fidelity';
+%ax5.Title.FontSize = 30;
+ax5.FontSize = 14;
 ax5.XLabel.String = 'Total measurement time (ms)';
 ax5.XLabel.FontSize = 20;
 ax5.YLabel.String = 'Fidelity';
@@ -477,4 +478,4 @@ set(gcf, 'Position', [100 100 600 500]);
 %set(gcf, 'Renderer', 'opengl');
 %saveas(gcf, 'Overall_Measurement.pdf');
 %export_fig Overall_Measurement.pdf
-%export_fig('Overall-Measurement4.pdf', '-pdf', '-opengl')
+%export_fig('Overall-Measurement5.pdf', '-pdf', '-opengl')
