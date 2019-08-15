@@ -13,3 +13,6 @@ much closer to the nearest level
 Overall-Measurement4 has off-resonant coupling to all levels with correct clebsch gordan 
 coefficients
 
+5: F->F' coefficient added in, detuning increased to 200kHz away from nearest transition
+
+6: changed to 1.6MHz so we don't sweep through motional sideband
