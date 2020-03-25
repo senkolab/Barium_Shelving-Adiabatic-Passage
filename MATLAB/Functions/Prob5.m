@@ -32,10 +32,10 @@ OProb = zeros(size(Rabi));
 %Go through and add in off resonant coupling error from start and end of
 %transfer for all possible transitions
 for i = 1:length(DetuningsStart)
-    OProb= OProb.*Rabi.^2./(2*(Rabi.^2 + DetuningsStart(i)^2))*(Clebsch(i))^2;
-    OProb= OProb.*Rabi.^2./(2*(Rabi.^2 + DetuningsEnd(i)^2))*(Clebsch(i))^2;
+    OProb= OProb + Rabi.^2./(2*(Rabi.^2 + min(DetuningsStart(i), DetuningsEnd(i))^2))*(Clebsch(i))^2;
 end
-%OProb = 0;
+%disp(OProb);
+OProb = 0;
 %Theta calculation at initial detuning
 Theta = 1/2*atan(Rabi/Detuning);
 %Initial adiabatic state error based on detuning not being infinite

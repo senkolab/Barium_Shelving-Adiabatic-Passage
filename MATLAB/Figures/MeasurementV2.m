@@ -96,8 +96,9 @@ if Graph3
         Detunings = abs(FreqsCare3level(i) -FreqsCare3level);
         Detunings(i) = [];
         SmallestDetuning = min(Detunings);
+        Detuning = 1.6e6;
         %Calculate the transfer time of this passage (optimal sweep rate; for each Rabi freq)
-        TransferTime = 2*SmallestDetuning./Sweep(index);
+        TransferTime = 2*Detuning./Sweep(index);
         TransferTime = TransferTime.';
         %Add to transfer tally
         TotalTransferTime3 = TotalTransferTime3 + TransferTime;
@@ -116,8 +117,9 @@ if Graph3
         Detunings = abs(FreqsCare3level(i) -FreqsCare3level);
         Detunings(i) = [];
         SmallestDetuning = min(Detunings);
+        Detuning = 1.6e6;
         %Calculate the transfer time of this passage (optimal sweep rate; for each Rabi freq)
-        TransferTime = 2*SmallestDetuning./Sweep(index);
+        TransferTime = 2*Detuning./Sweep(index);
         TransferTime = TransferTime.';
         %Add to transfer tally
         TotalTransferTime3 = TotalTransferTime3 + TransferTime;
@@ -142,8 +144,9 @@ if Graph5
         Detunings = abs(FreqsCare5level(i) -FreqsCare5level);
         Detunings(i) = [];
         SmallestDetuning = min(Detunings);
+        Detuning = 1.6e6;
         %Calculate the transfer time of this passage (optimal sweep rate; for each Rabi freq)
-        TransferTime = 2*SmallestDetuning./Sweep(index);
+        TransferTime = 2*Detuning./Sweep(index);
         TransferTime = TransferTime.';
         %Add to transfer tally
         TotalTransferTime5 = TotalTransferTime5 + TransferTime;
@@ -162,8 +165,9 @@ if Graph5
         Detunings = abs(FreqsCare5level(i) -FreqsCare5level);
         Detunings(i) = [];
         SmallestDetuning = min(Detunings);
+        Detuning = 1.6e6;
         %Calculate the transfer time of this passage (optimal sweep rate; for each Rabi freq)
-        TransferTime = 2*SmallestDetuning./Sweep(index);
+        TransferTime = 2*Detuning./Sweep(index);
         TransferTime = TransferTime.';
         %Add to transfer tally
         TotalTransferTime5 = TotalTransferTime5 + TransferTime;
@@ -173,6 +177,18 @@ if Graph5
         ProbIdeal5Level = ProbIdeal.*ProbIdeal5Level;
         %Add sweep data from this transfer to sweep data array
         %IdealSweeps5(i, :) = Sweep(index);
+    end
+    %Add in error from motional sidebands
+    %2nd order sidebands - Rabi frequency reduced eta^2
+    Detunings5 = [1.33269e6 1.467208e6 1.493138e6];
+    %Matrix to tell if you need to do this transfer twice
+    Twice5 = ['yes', 'no', 'no'];
+    for i = 1:length(Detunings5)
+        ProbSideband = Prob5_v2(Linewidth, RabiMat, SweepMat, Detunings5(i), 1, 2);
+        ProbIdeal5Level = ProbIdeal5Level.*(1-ProbSideband);
+        if Twice5(i) == "yes"
+            ProbIdeal5Level = ProbIdeal5Level.*(1-ProbSideband);
+        end
     end
 end
 %% 7-level transfer calculations
@@ -190,8 +206,9 @@ if Graph7
         Detunings = abs(FreqsCare7level(i) -FreqsCare7level);
         Detunings(i) = [];
         SmallestDetuning = min(Detunings);
+        Detuning = 1.6e6;
         %Calculate the transfer time of this passage (optimal sweep rate; for each Rabi freq)
-        TransferTime = 2*SmallestDetuning./Sweep(index);
+        TransferTime = 2*Detuning./Sweep(index);
         TransferTime = TransferTime.';
         %Add to transfer tally
         TotalTransferTime7 = TotalTransferTime7 + TransferTime;
@@ -210,8 +227,9 @@ if Graph7
         Detunings = abs(FreqsCare7level(i) -FreqsCare7level);
         Detunings(i) = [];
         SmallestDetuning = min(Detunings);
+        Detuning = 1.6e6;
         %Calculate the transfer time of this passage (optimal sweep rate; for each Rabi freq)
-        TransferTime = 2*SmallestDetuning./Sweep(index);
+        TransferTime = 2*Detuning./Sweep(index);
         TransferTime = TransferTime.';
         %Add to transfer tally
         TotalTransferTime7 = TotalTransferTime7 + TransferTime;
@@ -221,6 +239,18 @@ if Graph7
         ProbIdeal7Level = ProbIdeal.*ProbIdeal7Level;
         %Add sweep data from this transfer to sweep data array
         %IdealSweeps7(i, :) = Sweep(index);
+    end
+    %Add in error from motional sidebands
+    %2nd order sidebands - Rabi frequency reduced eta^2
+    Detunings7 = [1.33269e6 1.33269e6 1.49314e6 1.467208e6 1.493138e6];
+    %Matrix to tell if you need to do this transfer twice
+    Twice7 = ['yes', 'yes', 'yes', 'no', 'no'];
+    for i = 1:length(Detunings7)
+        ProbSideband7 = Prob5_v2(Linewidth, RabiMat, SweepMat, Detunings7(i), 1, 2);
+        ProbIdeal7Level = ProbIdeal7Level.*(1-ProbSideband7);
+        if Twice7(i) == "yes"
+            ProbIdeal7Level = ProbIdeal7Level.*(1-ProbSideband7);
+        end
     end
 end
 %% Fluorescence calculations
@@ -338,4 +368,4 @@ set(gcf, 'Position', [100 100 600 500]);
 %set(gcf, 'Renderer', 'opengl');
 %saveas(gcf, 'Overall_Measurement.pdf');
 %export_fig Overall_Measurement.pdf
-%export_fig('Overall-Measurement5.pdf', '-pdf', '-opengl')
+%export_fig('Overall-Measurement6.pdf', '-pdf', '-opengl')
