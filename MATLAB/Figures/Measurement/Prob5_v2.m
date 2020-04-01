@@ -1,3 +1,4 @@
+%This function does not have off-resonant error
 function[Prob] = Prob5_v2(Linewidth, Rabi, Sweep, Detuning, Fidelity, SidebandOrder)
 Detuning = 1.6e6;
 eta = 0.0246;

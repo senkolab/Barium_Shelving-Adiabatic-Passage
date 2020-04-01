@@ -1,3 +1,4 @@
+%MeasurementV3 has added motional sidebands
 %% Intitial and constants
 clearvars
 addpath('..\Functions', '..\plotxx', '..\Figures', '..\DrosteEffect-BrewerMap-b6a6efc', '..\altmany-export_fig-9502702');
