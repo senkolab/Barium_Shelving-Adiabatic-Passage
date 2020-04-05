@@ -1,7 +1,7 @@
 %MeasurementV5: Clutter completely cleaned up, using functions and globals
 %% Intitial and constants
 clearvars
-addpath('..\Functions', '..\plotxx', '..\Figures', '..\DrosteEffect-BrewerMap-b6a6efc', '..\altmany-export_fig-9502702');
+addpath('..\..\plotxx', '..\..\DrosteEffect-BrewerMap-b6a6efc', '..\..\altmany-export_fig-9502702');
 G = getGlobals();
 %Constants of the experiment
 %Decay time of metastable state
@@ -27,6 +27,8 @@ Sweep = Sweep.'; %in seconds
 %Setup Rabi Freqs
 %Rabi = 10e3:1*10e3:60e3;
 Rabi = 10e3:1e2:330e3;
+
+
 %% Setup figure
 fig = figure(5);
 set(fig,'defaultAxesColorOrder',[[26 146 186]/255; [50 181 107]/255]);

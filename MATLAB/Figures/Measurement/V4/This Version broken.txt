@@ -1,0 +1,4 @@
+Accidentally edited this into V5 without starting V5 first. Tried to recover
+but failed. It has something to do with the optimization of the sweeprates/rabi
+frequencies before then doing the motional frequencies. In V5 I made it optimize
+after both of these were done.

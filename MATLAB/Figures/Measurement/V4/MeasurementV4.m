@@ -1,3 +1,5 @@
+%MeasurementV3 has motional sideband calculations, Off-resonant coupling,
+%and uses some functions to clean up clutter
 %% Intitial and constants
 clearvars
 addpath('..\Functions', '..\plotxx', '..\Figures', '..\DrosteEffect-BrewerMap-b6a6efc', '..\altmany-export_fig-9502702');
@@ -73,7 +75,6 @@ if Graph3
     %Calculate probabilities from errors: LZ, Dephasing, Off-resonant
     %coupling, initial detuning
     [ProbIdeal3Level, indexx, TotalTime3Level] = MeasurementProb(3, Rabi, Sweep, Freqs, Which, Detuning);
-    
     %Worst case - where we drive more motional sidebands than we need to
     if ShowWorst && G.MotionalErrorOn
         %Motional sidebands - can avoid them completely as above, but here, we present

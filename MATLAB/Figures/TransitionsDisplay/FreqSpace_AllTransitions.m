@@ -1,5 +1,9 @@
 clearvars;
-addpath('..\Functions');
+addpath('..\..\Functions');
+
+CarrierFreq = -1092e6;
+GeomOrientation = "XZ";
+G = getGlobals();
 
 %% All frequencies and details about them
 %Format of DesiredTrans: [1:Frequency 2:F 3:mF 4:F' 5:mF' 6:Three? 7:Five? 8:Seven? 9:Clebsch]
@@ -121,6 +125,10 @@ OtherMotionalFreqs = [OtherMotionalFreqs(:, 1), Desiredd2(:, 2:9), ...
     OtherMotionalFreqs(:, 3:4)];
 
 MaxClebschs = max(str2double([DesiredTrans(:, 9); DesiredMotionalFreqs(:, 9); OtherFreqs(:, 9)]));
+
+%Retrieve all of the relevant frequencies
+[FreqsAbs, Freqs] = CalculateFreqs(G.I, G.J, G.Jp, CarrierFreq, ...
+    G.EnergiesS12, G.EnergiesD52, G.Fs, G.Fps, GeomOrientation);
 
 %% Figures
 QuditLevels = "Seven";

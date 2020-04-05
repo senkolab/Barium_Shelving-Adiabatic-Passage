@@ -9,6 +9,7 @@ function [Plot, Line, Text, Area, j] = PlotTransition(i, Trans, MaxClebschs, Col
 %allowing us to keep track of what color each particular encoded transition
 %or other freq. is.
 G = getGlobals;
+disp(Trans);
 Freq = str2double(Trans(1));
 if G.SameHeight
     Height = G.SameHeightHeight;
