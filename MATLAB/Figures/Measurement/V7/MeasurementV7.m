@@ -30,12 +30,12 @@ ShowWorst = false;
 
 %Setup sweep rate array
 %Sweep = logspace(7, 13, 10);
-Sweep = logspace(8, 11, 1000);
+Sweep = logspace(8, 11, 100);
 Sweep = Sweep.'; %in seconds
 
 %Setup Rabi Freqs
-%Rabi = 10e3:1*10e3:60e3;
-Rabi = 10e3:1e2:330e3;
+Rabi = 10e3:1*10e3:60e3;
+%Rabi = 10e3:1e2:330e3;
 
 %% Setup figure
 if Graph
@@ -61,19 +61,19 @@ if Graph3
     %Col2: Lower level state
     %Col3: Upper level state
     ThreeBestMeasurement = [...
-    "Shelve", 5, 5;...
-    "Shelve", 6, 6;...
-    "Fluoresce", 2, 2;...
-    "Deshelve", 5, 5;...
-    "Fluoresce", 5, 5];
-    [Line3, ProbIdeal3Level, TotalTime3Level] = ...
+    "Shelve", 5, 5;...%1
+    "Shelve", 6, 6;...%2
+    "Fluoresce", 2, 2;...%3
+    "Deshelve", 5, 5;...%4
+    "Fluoresce", 5, 5];%5
+    [Line3, ProbIdeal3Level, TotalTime3Level, ProbsIdealTransfer3Level, SweepIdealTransfer3Level] = ...
         GraphMeasurement_V2(3, false, Rabi, Sweep, ThreeBestMeasurement);
     Leg{numGraphs} = '3 level';
     numGraphs = numGraphs + 1;
     %No motional sidebands, so no worst measurement
     ThreeWorstMeasurement = [];
     if ShowWorst && ~isempty(ThreeWorstMeasurement)
-        [Line3W, ProbIdeal3LevelW, TotalTime3LevelW] = ...
+        [Line3W, ProbIdeal3LevelW, TotalTime3LevelW, ProbsIdealTransfer3LevelW, SweepIdealTransfer3LevelW] = ...
             GraphMeasurement_V2(3, true, Rabi, Sweep, ThreeWorstMeasurement);
         Leg{numGraphs} = '3 level worst';
         numGraphs = numGraphs + 1;

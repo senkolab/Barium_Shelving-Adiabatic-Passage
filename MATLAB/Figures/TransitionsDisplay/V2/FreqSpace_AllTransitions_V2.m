@@ -1,5 +1,5 @@
 clearvars;
-addpath('..\..\Functions');
+addpath('..\..\..\Functions\Frequencies_EnergyStructure');
 
 %3, 5, or 7
 Levels = 3;
@@ -39,7 +39,7 @@ else
 end
 
 %Get which frequencies actually matter for this encoding
-Care = GetCareTransitions(Levels, Freqs, GeomOrientation, Hide);
+Care = GetCareTransitions(Levels, Freqs, GeomOrientation);
 FreqsCareOverall = Freqs(Care, :);
 %Pick out the encoded transitions
 FreqsCareEncoded = FreqsCareOverall(1:Levels, :);

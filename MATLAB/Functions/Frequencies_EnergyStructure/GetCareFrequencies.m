@@ -21,8 +21,6 @@ function [Freqs] = GetCareFrequencies(G, LevelG, LevelP, CarrierFreq, GeomOrient
 %turned on
 if ~isempty(FreqsMot) && G.MotionalErrorOn
     Freqs = [Freqs; FreqsMot];
-else
-    Freqs = Freqs;
 end
 
 %Go through and get the encoded transitions indices and also get all of 
@@ -30,9 +28,29 @@ end
 EncodedList = [];
 Care = [];
 k = 1;
-%Only go through and look at the levels we shelve (the last, we don't)
+%Only go through and look at the levels
 for i = 1:size(LevelG, 1)
-    EncodedList = [EncodedList find(all(Freqs(:, 2:5) == [LevelG(i, :) LevelP(i,:)], 2) & Freqs(:, 7) == 0)];
+    if GeomOrientation == "XZ" || GeomOrientation == "Average"
+        %Ensure the list is always just an array, not a matrix
+        EncodedList = [EncodedList reshape(find(all(Freqs(:, 2:5) == [LevelG(i, :) LevelP(i,:)], 2)).', 1, [])];
+    elseif GeomOrientation == "Orthogonal"
+        for j = 1:size(LevelP,1)
+            disp(j);
+            disp("Condition1");
+            disp(all(~isnan(LevelG(i, :))));
+            disp("Condition2");
+            disp(all(~isnan(LevelP(j, :))));
+            disp("Condition3");
+            disp(abs(LevelG(i, 1) - LevelP(j, 1)) == 1);
+            disp("Condition4");
+            disp(abs(LevelG(i, 2) - LevelP(j, 2)) == 2);
+            fprintf("\n\n\n\n\n\n\n\n");
+            if all(~isnan(LevelG(i, :))) && all(~isnan(LevelP(j, :))) && ...
+                    abs(LevelG(i, 1) - LevelP(j, 1)) == 0 && abs(LevelG(i, 2) - LevelP(j, 2)) == 2
+                EncodedList = [EncodedList reshape(find(all(Freqs(:, 2:5) == [LevelG(i, :) LevelP(j, :)], 2)).', 1, [])];
+            end
+        end
+    end
     Care = [Care find(all(Freqs(:, 2:3) == LevelG(i, :), 2) | all(Freqs(:,4:5) == LevelP(i, :), 2)).'];
 end
 %Get rid of duplicates
@@ -43,4 +61,6 @@ Care(index) = [];
 FreqsCareEncoded = [Freqs(EncodedList, :) ones(length(EncodedList), 1)];
 FreqsCareOther = [Freqs(Care, :) zeros(length(Care), 1)];
 Freqs = [FreqsCareEncoded;FreqsCareOther];
+disp("     LevelsG    LevelsP");
+disp([LevelG LevelP]);
 end

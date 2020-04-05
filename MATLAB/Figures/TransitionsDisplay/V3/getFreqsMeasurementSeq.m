@@ -1,59 +1,5 @@
-function [Line, Prob, TotalTime, ProbsIdealTransfer, SweepRatesIdealTransfer] = ...
-    GraphMeasurement_V2(Level, Worst, Rabi, Sweep, Measurement)
-%This function graphs the best fidelity of a measurement, for each sweep rate.
-%It returns the following variables
-%RabiTimeProb: matrix with 3 columns, containing optimal Rabi rate, optimal
-%Time (calcualted from the optimal sweeprate), and the optimal probability
-%given these two optimized parameters
-%Line: The fidelity line that was graphed
-%ProbIdeal: The ideal probability broken out from RabiTimeProb
-%TotalTIme: The total time broken out from RabiTimeProb
-%The inputs needed are
-%Level: the d in qudit for this measurement. 3-level, 5-level, or 7-level
-%currently
-%Worst: Whether or not we're looking at the worst case. true or false
-%Rabi: The vector for the Rabi frequencies
-%Sweep: The vector for the sweeprates
+function[Freqs] = getFreqsMeasurementSeq(G, Measurement, LevelsG, LevelsP, Level, CarrierFreq, GeomOrientation)
 
-G = getGlobals_V2;
-
-%Get the parameters for this calculation
-if Level == 3
-    index = 1;
-    %Get the initial ground and excited state populations statuses
-    LevelsG = G.Levels3G;
-    LevelsP = G.Levels3P;
-elseif Level == 5
-    index = 2;
-    %Get the initial ground and excited state populations statuses
-    LevelsG = G.Levels5G;
-    LevelsP = G.Levels5P;
-elseif Level == 7
-    index = 3;
-    %Get the initial ground and excited state populations statuses
-    LevelsG = G.Levels7G;
-    LevelsP = G.Levels7P;
-end
-%Get the color for this line
-Color = G.Colors(index, :);
-%Get the style for this line
-if Worst
-    LineStyle = G.WorstLineStyle;
-else
-    LineStyle = cell2mat(G.LineStyles(index));
-end
-
-%Prepare for storing information on optimal transfers
-k = 0;
-ProbsIdealTransfer = [];
-SweepRatesIdealTransfer = [];
-
-%Go through the measurement sequence, shelving, deshelving, hiding, or
-%fluorescing
-disp("Starting Populations");
-disp("     LevelsG    LevelsP");
-disp([LevelsG LevelsP]);
-Prob = 1;
 for i = 1:size(Measurement, 1)
     MeasurementStep = Measurement(i, :);
     %Type of measurement: Shelve, Deshelve, Fluoresce, Hide
@@ -92,23 +38,14 @@ for i = 1:size(Measurement, 1)
             disp([LevelsG LevelsP]);
             continue;
         end
-        k = k + 1;
         %Set the upper level matrix entry equal to this
         LevelsP(Upper, :) = G.LevelsAll(Upper, :);
         fprintf("Shelving F=%i, mF=%i into state F'=%i, mF'=%i\n", LowerLevel(1), LowerLevel(2), LevelsP(Upper, 1), LevelsP(Upper, 2));
-        %Get probability for this transfer
-        [ProbTransfer, TotalTimeTransfer] = TransferProbV2(G, Sweep, Rabi, Level, LowerLevel, LevelsP(Upper, :), LevelsG, LevelsP);
         if i == 1
-            TotalTime = zeros(1, size(TotalTimeTransfer, 2));
+            Freqs = GetCareFrequencies(G, LevelsG, LevelsP, CarrierFreq, GeomOrientation);
+        else
+            Freqs = [Freqs; GetCareFrequencies(G, LevelsG, LevelsP, CarrierFreq, GeomOrientation)];
         end
-        [ProbsIdealTransfer(k, :), index] = max(ProbTransfer);
-        SweepRatesIdealTransfer(k, :) = Sweep(index);
-        TimeTransferOpt = zeros(1, length(index));
-        for j = 1:length(index)
-            TimeTransferOpt(j) = TotalTimeTransfer(index(j));
-        end
-        TotalTime = TotalTime + TimeTransferOpt;
-        Prob = Prob.*ProbsIdealTransfer(k,:);
         %Finished transfer, make change to lower level
         LevelsG(Lower, :) = [NaN NaN];
     elseif Type == "Deshelve"
@@ -117,11 +54,6 @@ for i = 1:size(Measurement, 1)
             fprintf("Step number %i %s for d = %i failed. \nOne of the states not specified. \n", i, Type, Level);
             disp("     LevelsG    LevelsP");
             disp([LevelsG LevelsP]);
-            continue;
-        end
-        %Catch if we're trying to deshelve before shelving
-        if ~exist('TotalTime', 'var')
-            fprintf("Step number %i %s for d = %i failed. \nTried to deshelve before shelving anything.\n", i, Type, Level);
             continue;
         end
         %Get the levels involved in the transfer
@@ -146,17 +78,7 @@ for i = 1:size(Measurement, 1)
         %Set the lower level matrix entry equal to this
         LevelsG(Lower, :) = G.LevelsAll(Lower, :);
         fprintf("Deshelving F'=%i, mF'=%i into state F=%i, mF=%i\n", UpperLevel(1), UpperLevel(2), LevelsG(Lower, 1), LevelsG(Lower, 2));
-        %Get probability for this transfer
-        [ProbTransfer, TotalTimeTransfer] = TransferProbV2(G, Sweep, Rabi, Level, UpperLevel, LevelsG(Lower, :), LevelsG, LevelsP);
-        k = k + 1;
-        [ProbsIdealTransfer(k, :), index] = max(ProbTransfer);
-        SweepRatesIdealTransfer(k, :) = Sweep(index);
-        TimeTransferOpt = zeros(1, length(index));
-        for j = 1:length(index)
-            TimeTransferOpt(j) = TotalTimeTransfer(index(j));
-        end
-        TotalTime = TotalTime + TimeTransferOpt;
-        Prob = Prob.*ProbsIdealTransfer(k,:);
+        Freqs = [Freqs; GetCareFrequencies(G, LevelsG, LevelsP, CarrierFreq, GeomOrientation)];
         %Finished transfer, make change to upper level
         LevelsP(Upper, :) = [NaN NaN];
     elseif Type == "Hide"
@@ -196,27 +118,12 @@ for i = 1:size(Measurement, 1)
         FluoresceState = LevelsG(Ground, :);
         fprintf("Fluorescing state F=%i, mF=%i\n", FluoresceState(1), FluoresceState(2));
         LevelsG(Ground, :) = [NaN NaN];
-        TotalTime = TotalTime + G.FluorescenceTime;
-        Prob = Prob.*exp(-G.FluorescenceTime/G.DecayTime);
     else
         fprintf("Step number %i %s for d = %i failed. \nYou've input a measurement step name wrong. \n", i, Type, Level);
         fprintf("Make sure all steps are called ""Shelve"", ""Deshelve"", ""Hide"", or ""Fluoresce""\n");
+        continue
     end
     disp("     LevelsG    LevelsP");
     disp([LevelsG LevelsP]);
-    [maxx, index] = max(ProbsIdealTransfer(k,:));
-    fprintf("The best fidelity for this transfer is %f%%, which used a Rabi frequency of %d and a sweep rate of %d. \n\n", ...
-        maxx*100, Rabi(index), SweepRatesIdealTransfer(k,index));
 end
-
-if Worst
-    fprintf("\n\n\n\n\n                 Worst %i-level: %f%%\n\n\n\n\n", Level, max(Prob)*100);
-else
-    fprintf("\n\n\n\n\n                 Ideal %i-level: %f%%\n\n\n\n\n", Level, max(Prob)*100);
-end
-% ProbIdeal(ProbIdeal<G.Thresh) = -inf;
-Prob(Prob<G.Thresh) = -inf;
-Line = semilogx(TotalTime, Prob);
-hold on;
-set(Line, 'Linewidth', 1.5, 'Linestyle', LineStyle, 'Color', Color);
 end

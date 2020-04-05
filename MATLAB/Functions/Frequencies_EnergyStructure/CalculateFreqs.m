@@ -10,6 +10,7 @@ function [Freqs, FreqsMotional] = CalculateFreqs(I, J, Jp, Carrier, Energies, En
 %this transition, the geometric orientation of the transition
 %The final input is whether or not you want the absoluate value or the
 %signed frequencies
+
 %% Take care of Geometrical orientation functions
 %XZ or Orthogonal. XZ suppresses \Delta m= +/- 1 transitions, Orthogonal
 %suppresses \Delta m = 0, +/- 1 transitions, Average to just set all these
