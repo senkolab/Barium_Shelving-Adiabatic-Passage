@@ -35,16 +35,6 @@ for i = 1:size(LevelG, 1)
         EncodedList = [EncodedList reshape(find(all(Freqs(:, 2:5) == [LevelG(i, :) LevelP(i,:)], 2)).', 1, [])];
     elseif GeomOrientation == "Orthogonal"
         for j = 1:size(LevelP,1)
-            disp(j);
-            disp("Condition1");
-            disp(all(~isnan(LevelG(i, :))));
-            disp("Condition2");
-            disp(all(~isnan(LevelP(j, :))));
-            disp("Condition3");
-            disp(abs(LevelG(i, 1) - LevelP(j, 1)) == 1);
-            disp("Condition4");
-            disp(abs(LevelG(i, 2) - LevelP(j, 2)) == 2);
-            fprintf("\n\n\n\n\n\n\n\n");
             if all(~isnan(LevelG(i, :))) && all(~isnan(LevelP(j, :))) && ...
                     abs(LevelG(i, 1) - LevelP(j, 1)) == 0 && abs(LevelG(i, 2) - LevelP(j, 2)) == 2
                 EncodedList = [EncodedList reshape(find(all(Freqs(:, 2:5) == [LevelG(i, :) LevelP(j, :)], 2)).', 1, [])];
@@ -61,6 +51,4 @@ Care(index) = [];
 FreqsCareEncoded = [Freqs(EncodedList, :) ones(length(EncodedList), 1)];
 FreqsCareOther = [Freqs(Care, :) zeros(length(Care), 1)];
 Freqs = [FreqsCareEncoded;FreqsCareOther];
-disp("     LevelsG    LevelsP");
-disp([LevelG LevelP]);
 end

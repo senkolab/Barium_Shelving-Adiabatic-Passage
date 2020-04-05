@@ -24,18 +24,11 @@ if MeasurementSequence
 else
     Freqs = [Freqs; GetCareFrequencies(G, LevelsG, LevelsP, CarrierFreq, GeomOrientation)];
 end
-%Can end up with some transitions that are used as an encoding transition
-%somewhere, but not elsewhere. These are duplicated, but with the last row
-%tagging it as encoded in one entry and unencoded in the other. Delete
-%these duplicates
-Encoded = Freqs(Freqs(:, 8) == 1, :);
-Unencoded = Freqs(Freqs(:, 8) == 0, :);
-for i = 1:size(Encoded, 1)
-    Unencoded = Unencoded(Unencoded(:, 1) ~= Encoded(i, 1), :);
-end
-Freqs = [Encoded;Unencoded];
+Encoded = Freqs(Freqs(:, 8) == 1);
 
-%Delete other duplicates
+Unencoded = Freqs(Freqs(:, 8) == 0);
+Unencoded = Unencoded(Unencoded(:, 1) == Encoded(:, 1) 
+%Delete duplicates
 [Freqs, index] = unique(Freqs, 'rows');
 
 %Sort by zeroth order carrier freqs
