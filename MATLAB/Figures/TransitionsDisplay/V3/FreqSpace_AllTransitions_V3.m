@@ -2,9 +2,9 @@ clearvars;
 addpath('..\..\..\Functions\Frequencies_EnergyStructure');
 %% Parameters
 %3, 5, or 7
-Levels = 5;
+Levels = 7;
 Worst = false;
-MeasurementSequence = true;
+MeasurementSequence = false;
 MeasurementManual = false;
 %"XZ", "Orthogonal", or "Average"
 GeomOrientation = "XZ";
@@ -97,10 +97,8 @@ for i = 1:size(Freqs, 1)
     %highest encoded transition
     LeftBound = abs(min(FreqsEnc(:, 1))) - G.GraphOverShoot;
     RightBound = abs(max(FreqsEnc(:, 1))) + G.GraphOverShoot;
-    disp(Trans(1));
     if abs(Trans(1)) > LeftBound && ...
             abs(Trans(1)) < RightBound
-        disp("Made it");
         [Plot, Line, Text, Area] = PlotTransition_V3(Trans, Color, MaxClebschs, Detuning, GeomOrientation);
     end
 end

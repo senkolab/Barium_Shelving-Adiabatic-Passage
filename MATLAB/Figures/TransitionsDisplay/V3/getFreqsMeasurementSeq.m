@@ -42,9 +42,9 @@ for i = 1:size(Measurement, 1)
         LevelsP(Upper, :) = G.LevelsAll(Upper, :);
         fprintf("Shelving F=%i, mF=%i into state F'=%i, mF'=%i\n", LowerLevel(1), LowerLevel(2), LevelsP(Upper, 1), LevelsP(Upper, 2));
         if i == 1
-            Freqs = GetCareFrequencies(G, LevelsG, LevelsP, CarrierFreq, GeomOrientation);
+            Freqs = GetCareFrequencies(G, LowerLevel, LevelsP(Upper,:), CarrierFreq, GeomOrientation);
         else
-            Freqs = [Freqs; GetCareFrequencies(G, LevelsG, LevelsP, CarrierFreq, GeomOrientation)];
+            Freqs = [Freqs; GetCareFrequencies(G, LowerLevel, LevelsP(Upper,:), CarrierFreq, GeomOrientation)];
         end
         %Finished transfer, make change to lower level
         LevelsG(Lower, :) = [NaN NaN];
@@ -78,7 +78,7 @@ for i = 1:size(Measurement, 1)
         %Set the lower level matrix entry equal to this
         LevelsG(Lower, :) = G.LevelsAll(Lower, :);
         fprintf("Deshelving F'=%i, mF'=%i into state F=%i, mF=%i\n", UpperLevel(1), UpperLevel(2), LevelsG(Lower, 1), LevelsG(Lower, 2));
-        Freqs = [Freqs; GetCareFrequencies(G, LevelsG, LevelsP, CarrierFreq, GeomOrientation)];
+        Freqs = [Freqs; GetCareFrequencies(G, LevelsG(Lower,:), UpperLevel, CarrierFreq, GeomOrientation)];
         %Finished transfer, make change to upper level
         LevelsP(Upper, :) = [NaN NaN];
     elseif Type == "Hide"
@@ -125,5 +125,6 @@ for i = 1:size(Measurement, 1)
     end
     disp("     LevelsG    LevelsP");
     disp([LevelsG LevelsP]);
+    fprintf("\n");
 end
 end

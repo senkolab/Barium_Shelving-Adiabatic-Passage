@@ -34,19 +34,10 @@ for i = 1:length(FreqsMotional)
     AllDiffs = [AllDiffs; Diff FreqDoing(:,1:7) Motionali(:,1:7)];
 end
 FreqsInsideSweep = AllDiffs(AllDiffs(:,1) <= Detuning, :);
-disp(FreqsInsideSweep);
+%Get rid of transitions that are themselves - detuning is zero
 if ~isempty(FreqsInsideSweep)
-    FreqsInside = [];
-    for i = 1:size(FreqsInsideSweep, 1)
-        AnyDiff = any(FreqsInsideSweep(i, 2:8) ~= FreqsInsideSweep(i, 9:15));
-        if AnyDiff
-            FreqsInsideSweepNew = FreqsInsideSweep(i, :);
-            FreqsInside = [FreqsInside; FreqsInsideSweepNew];
-        end
-    end
-    FreqsInsideSweep = FreqsInside;
+    FreqsInsideSweep = FreqsInsideSweep(FreqsInsideSweep(:, 1) ~=0, :);
 end
-disp(FreqsInsideSweep);
 %FreqsInsideSweep laid out as follows:
 %Col1: Frequency distance from an important transition
 %Col2: Frequency of important transition
@@ -66,11 +57,7 @@ if ~isempty(FreqsInsideSweep)
     for i = 1:size(FreqsInsideSweep, 1)
         %Find out which level was swept through, and whether it was in the
         %excited state or not
-        disp(FreqsInsideSweep(i,:));
-        disp([LevelsG LevelsP]);
         [indexx, indexy] = find([all(FreqsInsideSweep(i, 10:11) == LevelsG, 2) all(FreqsInsideSweep(i, 12:13) == LevelsP, 2)], 2);
-        disp(indexx);
-        disp(indexy);
         %If it was in the ground state, form text with F, mF
         if indexy == 1
             GroundState = LevelsG(indexx, :);
@@ -79,12 +66,23 @@ if ~isempty(FreqsInsideSweep)
         elseif indexy == 2
             ExcitedState = LevelsP(indexx, :);
             TextEncState = sprintf("F'=%i, mF'=%i", ExcitedState(1), ExcitedState(2));
+        %Case where there exists population in both states
         elseif size(indexy, 1) == 2
-            TextEncState = sprintf("F'=%i, mF'
+            ExcitedState = LevelsP(indexx(2),:);
+            GroundState = LevelsG(indexx(1),:);
+            TextEncState = sprintf("F'=%i, mF'=%i, to encoded state F = %i, mF=%i", ExcitedState(1), ExcitedState(2), GroundState(1), GroundState(2));
+        end
+        if abs(FreqsInsideSweep(i, 15)) == 0
+            TextOrder = sprintf("Carrier");
+        elseif abs(FreqsInsideSweep(i, 15)) == 1
+            TextOrder = sprintf("1st order");
+        elseif abs(FreqsInsideSweep(i, 15)) == 2
+            TextOrder = sprintf("2nd order");
         end
         %Print the information
-        fprintf("A motional frequency driving F=%i, mF = %i, F'=%i, mF'=%i was swept, driving population from encoded state %s.\n", ...
-            FreqsInsideSweep(10), FreqsInsideSweep(11), FreqsInsideSweep(12), FreqsInsideSweep(13), TextEncState);
+        fprintf("A %s motional frequency driving F=%i, mF = %i, F'=%i, mF'=%i was swept, driving population from encoded state %s.\n", ...
+            TextOrder, FreqsInsideSweep(i, 10), FreqsInsideSweep(i, 11), FreqsInsideSweep(i, 12), FreqsInsideSweep(i, 13), TextEncState);
+        disp(FreqsInsideSweep(:, 10:13));
     end
 end
 
@@ -104,6 +102,7 @@ if ~isempty(FreqsInsideSweep)
     FreqsMotSweep = FreqsInsideSweep(find(Freqs(WhichTransition, 1) == FreqsInsideSweep(:, 2)), :);
     for j = 1:size(FreqsMotSweep, 1)
         Prob = Prob.*MotionalSweepsV2(FreqsMotSweep, SweepMat, RabiFreqs, Detuning);
+        disp(Prob
     end
 end
 %Calculate transfer time for each sweeprate

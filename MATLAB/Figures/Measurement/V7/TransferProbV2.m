@@ -72,9 +72,16 @@ if ~isempty(FreqsInsideSweep)
             GroundState = LevelsG(indexx(1),:);
             TextEncState = sprintf("F'=%i, mF'=%i, to encoded state F = %i, mF=%i", ExcitedState(1), ExcitedState(2), GroundState(1), GroundState(2));
         end
+        if abs(FreqsInsideSweep(i, 15)) == 0
+            TextOrder = sprintf("Carrier");
+        elseif abs(FreqsInsideSweep(i, 15)) == 1
+            TextOrder = sprintf("1st order");
+        elseif abs(FreqsInsideSweep(i, 15)) == 2
+            TextOrder = sprintf("2nd order");
+        end
         %Print the information
-        fprintf("A motional frequency driving F=%i, mF = %i, F'=%i, mF'=%i was swept, driving population from encoded state %s.\n", ...
-            FreqsInsideSweep(10), FreqsInsideSweep(11), FreqsInsideSweep(12), FreqsInsideSweep(13), TextEncState);
+        fprintf("A %s motional frequency driving F=%i, mF = %i, F'=%i, mF'=%i was swept, driving population from encoded state %s.\n", ...
+            TextOrder, FreqsInsideSweep(i, 10), FreqsInsideSweep(i, 11), FreqsInsideSweep(i, 12), FreqsInsideSweep(i, 13), TextEncState);
     end
 end
 
@@ -93,7 +100,7 @@ Prob = Prob.*Prob6(G.Linewidth, RabiMat, SweepMat, Freqs, G.Fidelity, WhichTrans
 if ~isempty(FreqsInsideSweep)
     FreqsMotSweep = FreqsInsideSweep(find(Freqs(WhichTransition, 1) == FreqsInsideSweep(:, 2)), :);
     for j = 1:size(FreqsMotSweep, 1)
-        Prob = Prob.*MotionalSweepsV2(FreqsMotSweep, SweepMat, RabiFreqs, Detuning);
+        Prob = Prob.*MotionalSweepsV2(FreqsMotSweep(j, :), SweepMat, RabiFreqs, Detuning);
     end
 end
 %Calculate transfer time for each sweeprate

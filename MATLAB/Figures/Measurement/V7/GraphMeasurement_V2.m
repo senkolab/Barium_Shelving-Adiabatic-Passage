@@ -63,6 +63,8 @@ for i = 1:size(Measurement, 1)
     if any(MeasurementStep < 1 | MeasurementStep > 8)
         fprintf("Step number %i %s for d = %i failed. \nState number specified is out of range of possible levels.\n", i, Type, Level);
         continue
+    else
+        fprintf("Step number %i\n", i);
     end
     if Type == "Shelve"
         %Catch if we forgot to specify a level in a transfer
@@ -208,6 +210,8 @@ for i = 1:size(Measurement, 1)
     if Type == "Shelve" || Type == "Deshelve"
         fprintf("The best fidelity for this transfer is %f%%, which used a Rabi frequency of %f kHz and a sweep rate of %f MHz/ms. \n\n", ...
             maxx*100, Rabi(index)*1e-3, SweepRatesIdealTransfer(k,index)*1e-9);
+    else
+        fprintf("\n\n");
     end
 end
 
