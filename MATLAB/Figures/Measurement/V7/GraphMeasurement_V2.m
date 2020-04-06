@@ -205,8 +205,10 @@ for i = 1:size(Measurement, 1)
     disp("     LevelsG    LevelsP");
     disp([LevelsG LevelsP]);
     [maxx, index] = max(ProbsIdealTransfer(k,:));
-    fprintf("The best fidelity for this transfer is %f%%, which used a Rabi frequency of %d and a sweep rate of %d. \n\n", ...
-        maxx*100, Rabi(index), SweepRatesIdealTransfer(k,index));
+    if Type == "Shelve" || Type == "Deshelve"
+        fprintf("The best fidelity for this transfer is %f%%, which used a Rabi frequency of %f kHz and a sweep rate of %f MHz/ms. \n\n", ...
+            maxx*100, Rabi(index)*1e-3, SweepRatesIdealTransfer(k,index)*1e-9);
+    end
 end
 
 if Worst
