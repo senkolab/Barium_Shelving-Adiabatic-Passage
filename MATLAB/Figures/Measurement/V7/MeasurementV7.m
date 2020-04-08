@@ -1,7 +1,6 @@
-%MeasurementV6: 
 %% Intitial and constants
 clearvars
-addpath('..\..\..\Functions\Frequencies_EnergyStructure');
+addpath('..\..\..\Functions\Frequencies_EnergyStructure', '..\..\..\altmany-export_fig-9502702');
 %Constants of the experiment
 %Decay time of metastable state
 DecayTime = 35;
@@ -10,7 +9,7 @@ DecayTime = 35;
 GeomOrientation = "XZ";
 %Carrier frequency
 CarrierFreq = -1130e6;
-Detuning = 1.31e6;
+Detuning = 1.3e6;
 %Tau = 5;%5 Hz Linewidth
 Linewidth = 1;
 %Fidelity
@@ -26,7 +25,10 @@ Graph3 = true;
 Graph5 = true;
 Graph7 = true;
 Graph = Graph3 || Graph5 || Graph7;
-ShowWorst = true;
+ShowWorst = false;
+SavePDF = false;
+SavePDFName = sprintf("Measurement%s_%gMHz_%gMHz", GeomOrientation, CarrierFreq*1e-6, Detuning*1e-6);
+SavePDFName = strrep(SavePDFName, ".", "p");
 
 %Setup sweep rate array
 %Sweep = logspace(7, 13, 10);
@@ -35,7 +37,7 @@ Sweep = Sweep.'; %in seconds
 
 %Setup Rabi Freqs
 %Rabi = 10e3:1*10e3:60e3;
-Rabi = 10e3:1e2:330e3;
+Rabi = 10e3:1e1:330e3;
 
 %% Setup figure
 if Graph
@@ -45,7 +47,7 @@ if Graph
     %Set background color white
     set(gcf,'color','white');
     %set(LevRight, 'line
-    ax5 = gca;
+    ax = gca;
     Leg = {};
     numGraphs = 1;
 end
@@ -145,7 +147,7 @@ if Graph7
         "Fluoresce" 7 7;...
         "Deshelve" 8 8;...
         "Fluoresce" 8 8];
-    [Line7, ProbIdeal7Level, TotalTime7Level] = ...
+    [Line7, ProbIdeal7Level, TotalTime7Level, ProbsIdealTransfer, SweepRatesIdealTransfer] = ...
         GraphMeasurement_V2(7, false, Rabi, Sweep, SevenBestMeasurement);
     Leg{numGraphs} = '7 level';
     numGraphs = numGraphs + 1;
@@ -164,21 +166,38 @@ if Graph
     l3 = legend(Leg, 'Location', 'Northeast','FontSize',14);
     %ax5.Title.String = 'Qudit measurement fidelity';
     %ax5.Title.FontSize = 30;
-    ax5.FontSize = 14;
-    ax5.XLabel.String = 'Total measurement time (s)';
-    ax5.XLabel.FontSize = 20;
-    ax5.YLabel.String = 'Fidelity';
-    ax5.YLabel.FontSize = 20;
+    ax.FontSize = 14;
+    if G.TimeScaling == 1e3
+        timetext = "ms";
+    else
+        timetext = "s";
+    end
+    ax.XLabel.String = sprintf('Total measurement time (%s)', timetext);
+    ax.XLabel.FontSize = 20;
+    ax.YLabel.String = 'Fidelity';
+    ax.YLabel.FontSize = 20;
     ylim([G.Thresh 1]);
-    xlim([3e-4 2e-1]);
-    set(ax5, 'YTick', 0:0.005:1,...
+    xlim([5e-4 3e-1]*G.TimeScaling);
+    set(ax, 'YTick', 0:0.005:1,...
         'YMinorTick', 'on', 'TickDir', 'out',...
         'YGrid', 'on', 'XGrid', 'on')
-    %,...
-    %    'XTickLabel', [0.1 1 10 100 1000]
+    ,...
+    tickslabel = ax.XTickLabel;
+    newtickslabel = [];
+    for i = 1:length(tickslabel)
+        label = char(tickslabel(i));
+        label = strrep(label, "{", "");
+        label = strrep(label, "}", "");
+        label = strrep(label, "^", "e");
+        label = str2double(label)*0.1;
+        newlabel = sprintf("%d", label);
+        newtickslabel(i) = newlabel;
+    end
+    ax.XTickLabel = num2str(newtickslabel.');
     set(gcf, 'Position', [100 100 600 500]);
     %set(gcf, 'Renderer', 'opengl');
     %saveas(gcf, 'Overall_Measurement.pdf');
-    %export_fig Overall_Measurement.pdf
-    %export_fig('Overall-Measurement6.pdf', '-pdf', '-opengl')
+    if SavePDF
+        export_fig(SavePDFName, '-pdf', '-opengl')
+    end
 end

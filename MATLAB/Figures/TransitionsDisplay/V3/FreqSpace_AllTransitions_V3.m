@@ -1,16 +1,20 @@
 clearvars;
-addpath('..\..\..\Functions\Frequencies_EnergyStructure');
+addpath('..\..\..\Functions\Frequencies_EnergyStructure', '..\..\..\altmany-export_fig-9502702');
 %% Parameters
-%3, 5, or 7
-Levels = 7;
 Worst = false;
 MeasurementSequence = false;
 MeasurementManual = false;
+SavePDF = true;
+
+%3, 5, or 7
+Levels = 7;
 %"XZ", "Orthogonal", or "Average"
 GeomOrientation = "XZ";
 CarrierFreq = -1130e6;
-Detuning = 1.31e6;
+Detuning = 1.3e6;
 G = getGlobals_V3();
+SavePDFName = sprintf("%s_%gMHz_%i-Level_%gMHz", GeomOrientation, CarrierFreq*1e-6, Levels, Detuning*1e-6);
+SavePDFName = strrep(SavePDFName, ".", "p");
 
 %% Preparation - Measurement info, frequency info
 %Get the measurement sequence
@@ -106,7 +110,7 @@ end
 %% Touch up the graph
 ax.XLim = [LeftBound RightBound];
 Legend = sprintf(...
-    'Encoded: Blue/Purple\nOther: Red/Orange\nLaserSweep: Shaded Areas\nIrrelevant: Grey\nMotional Sidebands: White Arrow');
+    'Encoded: Blue/Purple Solid\nOther: Red/Orange Dashed\nLaserSweep: Shaded Areas\nMotional Sidebands: White Arrow');
 LegendXPosition = ((max(FreqsEnc(1:Levels,1)) + min(FreqsEnc(1:Levels,1)))/2 + G.GraphOverShoot/2);
 if Levels == 3
     Levelsi = 1;
@@ -116,8 +120,8 @@ elseif Levels == 7
     Levelsi = 3;
 end
 ax.YLim = [0 G.GraphCut(Levelsi)];
-text(LegendXPosition, G.GraphCut(Levelsi) - 0.2, Legend, 'FontSize', 16);
-TitleText = sprintf('%i-Level %s Orientation', Levels, GeomOrientation);
+text(LegendXPosition, G.GraphCut(Levelsi) - 0.1, Legend, 'FontSize', 16);
+TitleText = sprintf('%i-Level %s Orientation, Carrier %d MHz', Levels, GeomOrientation, CarrierFreq*1e-6);
 title(TitleText, 'FontSize', 16);
 fig.Position = [100 100 1200 600];
 ylabel('Normalized Strength', 'FontSize', 16);
@@ -130,3 +134,7 @@ end
 xlabel(XText, 'FontSize', 16);
 %Set background color white
 set(gcf,'color','white');
+
+if SavePDF
+    export_fig(SavePDFName, '-pdf', '-opengl')
+end

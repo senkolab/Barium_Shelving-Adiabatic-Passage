@@ -17,7 +17,7 @@ function [Prob, TotalTime] = TransferProbV2(G, SweepRates, RabiFreqs, Levels, Le
 %figure or the measurements figure
 
 %Get the session global variables
-[GeomOrientation, CarrierFreq, Detuning, Linewidth, F] = getVarGlobals();
+[GeomOrientation, CarrierFreq, Detuning, Linewidth, F] = getVarGlobalsPop();
 
 %Get all of the frequencies that matter given the status of the ground
 %state and excited state

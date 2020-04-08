@@ -1,4 +1,4 @@
-function[Prob] = Prob6(Linewidth, Rabi, Sweep, Freqs, Fidelity, Level, Detuning)
+function[Prob] = Prob6(G, Linewidth, Rabi, Sweep, Freqs, Fidelity, Level, Detuning)
 %This function returns the probability of a transfer, taking into account
 %off-resonant error to other levels, error from the intitial detuning,
 %error from LZ adiabatic passage, error from dephasing
@@ -14,7 +14,6 @@ function[Prob] = Prob6(Linewidth, Rabi, Sweep, Freqs, Fidelity, Level, Detuning)
 %Detuning: the detuning we start the laser sweep at
 %Order: a list of what motional order these frequencies are
 
-G = getGlobals_V2();
 
 %Pull out the frequencies, clebschs gordan coefficients, and motional orders
 Freqss = Freqs(:,1);

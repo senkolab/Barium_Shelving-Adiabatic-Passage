@@ -1,4 +1,4 @@
-function G = getGlobals_V2()
+function G = getGlobalsPop()
 %% Global Parameters
 G.Fidelity = 1;
 G.Linewidth = 1;
@@ -11,6 +11,7 @@ G.Fps = [1 2];
 G.Eta = 0.0243;
 G.MotionalFreq = 2e6;
 
+
 G.DetuningErrorOn = true;
 G.DephasingErrorOn = true;
 G.DephasingExp = 2*pi^2;
@@ -21,30 +22,7 @@ G.MotionalErrorOn = true;
 G.DecayTimeErrorOn = true;
 G.Thresh = 0.975;
 
-G.ThreeColor = [128 0 132]/255;
-G.FiveColor = [0 133 93]/255;
-G.SevenColor = [19 14 141]/255;
-G.Colors = [G.ThreeColor;G.FiveColor;G.SevenColor];
-G.ThreeLineStyle = '-';
-G.FiveLineStyle = '-.';
-G.SevenLineStyle = '--';
-G.WorstLineStyle = ':';
-G.LineStyles = {G.ThreeLineStyle;G.FiveLineStyle;G.SevenLineStyle};
-G.TimeScaling = 1e3;
-
-%% Fluorescence Information
-NA = 0.5;
-Angle = asin(NA);
-PercentCollected = sin(Angle/2)^2;
-QE = 0.8;
-P12Lifetime = 7.92e-9;
-SaturationFluorescenceFreq = 1/(2*2*pi()*P12Lifetime);
-AssumedFluorescenceFreq = SaturationFluorescenceFreq/4;
-DetectionRate = AssumedFluorescenceFreq*PercentCollected*QE;
-PhotonsToCollect = 10;
-G.FluorescenceTime = PhotonsToCollect/DetectionRate;
-
-%% Frequency Information
+%% Energy level Information
 %detuning frequency of -1092 MHz results in many more overlaps in
 %frequencies for unwanted transitions. We pick -1030 MHz instead to avoid
 %many of these. 
