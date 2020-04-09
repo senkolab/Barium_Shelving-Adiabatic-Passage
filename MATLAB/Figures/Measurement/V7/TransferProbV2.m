@@ -3,8 +3,7 @@ function [Prob, TotalTime] = TransferProbV2(G, SweepRates, RabiFreqs, Levels, Le
 %The outputs are the probabilities of the transfer for different rabi rates,
 %sweep rates, and the time for each of these probabilities
 %The inputs are
-%G: a global variable containing energy structure information, linewidth
-%and fidelity scaling factor information, and information on which errors
+%G: a global variable containing energy structure information, and information on which errors
 %we're keeping on
 %SweepRates: a vector of all sweeprates
 %RabiFreqs: a vector of all rabi frequencies
@@ -99,13 +98,13 @@ SweepMat = repmat(SweepRates, 1, length(RabiFreqs));
 RabiMat = repmat(RabiFreqs, length(SweepRates), 1);
 
 %Calculate the probabiltiy of transfer for all errors but motional sweeping
-Prob = Prob.*Prob6(G.Linewidth, RabiMat, SweepMat, Freqs, G.Fidelity, WhichTransition, Detuning);
+Prob = Prob.*Prob6(Linewidth, RabiMat, SweepMat, Freqs, F, WhichTransition, Detuning);
 
 %Add in motional frequency sweep through an unwanted transition
 if ~isempty(FreqsInsideSweep)
     FreqsMotSweep = FreqsInsideSweep(find(Freqs(WhichTransition, 1) == FreqsInsideSweep(:, 2)), :);
     for j = 1:size(FreqsMotSweep, 1)
-        Prob = Prob.*MotionalSweepsV2(FreqsMotSweep(j, :), SweepMat, RabiFreqs, Detuning);
+        Prob = Prob.*MotionalSweepsV2(FreqsMotSweep(j, :), SweepMat, RabiFreqs);
     end
 end
 %Calculate transfer time for each sweeprate

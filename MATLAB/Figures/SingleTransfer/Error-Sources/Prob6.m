@@ -14,7 +14,6 @@ function[Prob] = Prob6(G, Linewidth, Rabi, Sweep, Freqs, Fidelity, Level, Detuni
 %Detuning: the detuning we start the laser sweep at
 %Order: a list of what motional order these frequencies are
 
-
 %Pull out the frequencies, clebschs gordan coefficients, and motional orders
 Freqss = Freqs(:,1);
 Clebschs = Freqs(:,6);

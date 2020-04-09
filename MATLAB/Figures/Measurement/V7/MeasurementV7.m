@@ -2,16 +2,13 @@
 clearvars
 addpath('..\..\..\Functions\Frequencies_EnergyStructure', '..\..\..\altmany-export_fig-9502702');
 %Constants of the experiment
-%Decay time of metastable state
-DecayTime = 35;
-
 %Geometric orientation - XZ, Orthogonal, or Average
 GeomOrientation = "XZ";
 %Carrier frequency
 CarrierFreq = -1130e6;
 Detuning = 1.3e6;
 %Tau = 5;%5 Hz Linewidth
-Linewidth = 1;
+Linewidth = 2;
 %Fidelity
 F = 1;
 
@@ -27,7 +24,7 @@ Graph7 = true;
 Graph = Graph3 || Graph5 || Graph7;
 ShowWorst = false;
 SavePDF = false;
-SavePDFName = sprintf("Measurement%s_%gMHz_%gMHz", GeomOrientation, CarrierFreq*1e-6, Detuning*1e-6);
+SavePDFName = sprintf("Measurement%s_%gMHzCarrier_%gMHzDetuning_%gHz", GeomOrientation, CarrierFreq*1e-6, Detuning*1e-6, Linewidth);
 SavePDFName = strrep(SavePDFName, ".", "p");
 
 %Setup sweep rate array
@@ -37,7 +34,7 @@ Sweep = Sweep.'; %in seconds
 
 %Setup Rabi Freqs
 %Rabi = 10e3:1*10e3:60e3;
-Rabi = 10e3:1e1:330e3;
+Rabi = 10e3:1e2:330e3;
 
 %% Setup figure
 if Graph

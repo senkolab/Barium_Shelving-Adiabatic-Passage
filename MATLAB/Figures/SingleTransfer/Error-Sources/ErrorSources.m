@@ -4,8 +4,6 @@ addpath('..\..\..\Functions\Frequencies_EnergyStructure', ...
     '..\..\..\altmany-export_fig-9502702');
 %Constants of the experiment
 %Constants of the experiment
-%Decay time of metastable state
-DecayTime = 35;
 
 %Geometric orientation - XZ, Orthogonal, or Average
 GeomOrientation = "XZ";
@@ -13,7 +11,7 @@ GeomOrientation = "XZ";
 CarrierFreq = -1130e6;
 Detuning = 1.3e6;
 %Tau = 5;%5 Hz Linewidth
-Linewidth = 1;
+Linewidth = 2;
 %Fidelity
 F = 1;
 SavePDF = false;
@@ -36,7 +34,7 @@ Level2 = [2 0];
 SavePDFName = sprintf("SingleTransfer_%s_%g_MHz_%gMHz_F=%i_mF=%i_Fp=%i_mFp=%i",...
     GeomOrientation, CarrierFreq*1e-6, Detuning*1e-6, Level1(1), Level1(2), Level2(1), Level2(2));
 SavePDFName = strrep(SavePDFName, ".", "p");
-[Probs, TotalTime] = TransferProbV2(G, Sweep, Rabi, 3, Level1, Level2, LevelsG, LevelsP);
+[Probs, TotalTime] = TransferProbV2Error(G, Sweep, Rabi, 3, Level1, Level2, LevelsG, LevelsP);
 ProbabilityCutoff = G.Thresh;
 Probs(Probs<ProbabilityCutoff) = -inf;
 
@@ -61,7 +59,7 @@ SevenTotal = 1;
 for i = 1:length(Errors)
     Error = Errors(i);
     G = ChangeErrors(G, Error);
-    Probb = TransferProbV2(G, Sweepp, Rabii, 3, Level1, Level2, LevelsG, LevelsP, true);
+    Probb = TransferProbV2Error(G, Sweepp, Rabii, 3, Level1, Level2, LevelsG, LevelsP, true);
     ErrorVal = 1-Probb;
     %fprintf("Single Transfer %s error: %d\n", Error, 1-Probb);
     if i == 1
@@ -78,6 +76,6 @@ for i = 1:length(Errors)
     SevenTotal = SevenTotal*Seven;
     fprintf("%d   %d   %d   %s\n", Threee, Fivee, Sevenn, Error);
     if Error == "Decay"
-        fprintf("%f%%     %f%%     %f%%     Total Fidelity\n", ThreeTotal*100, FiveTotal*100, SevenTotal*100, Error);
+        fprintf("%f%%     %f%%     %f%%     Total Fidelity\n", ThreeTotal*100, FiveTotal*100, SevenTotal*100);
     end
 end

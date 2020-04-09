@@ -1,4 +1,4 @@
-function [Prob, TotalTime] = TransferProbV2(G, SweepRates, RabiFreqs, Levels, Level1, Level2, LevelsG, LevelsP, Single)
+function [Prob, TotalTime] = TransferProbV2Error(G, SweepRates, RabiFreqs, Levels, Level1, Level2, LevelsG, LevelsP, Single)
 %This function gives the probability of a transfer
 %The outputs are the probabilities of the transfer for different rabi rates,
 %sweep rates, and the time for each of these probabilities
@@ -17,7 +17,7 @@ function [Prob, TotalTime] = TransferProbV2(G, SweepRates, RabiFreqs, Levels, Le
 %figure or the measurements figure
 
 %Get the session global variables
-[GeomOrientation, CarrierFreq, Detuning, Linewidth, F] = getVarGlobalsPop();
+[GeomOrientation, CarrierFreq, Detuning, Linewidth, F] = getVarGlobalsErrorSources();
 
 %Get all of the frequencies that matter given the status of the ground
 %state and excited state
@@ -99,7 +99,7 @@ SweepMat = repmat(SweepRates, 1, length(RabiFreqs));
 RabiMat = repmat(RabiFreqs, length(SweepRates), 1);
 
 %Calculate the probabiltiy of transfer for all errors but motional sweeping
-Prob = Prob.*Prob6(G.Linewidth, RabiMat, SweepMat, Freqs, G.Fidelity, WhichTransition, Detuning);
+Prob = Prob.*Prob6(G, Linewidth, RabiMat, SweepMat, Freqs, F, WhichTransition, Detuning);
 
 %Add in motional frequency sweep through an unwanted transition
 if ~isempty(FreqsInsideSweep)

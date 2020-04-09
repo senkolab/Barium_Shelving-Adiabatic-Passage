@@ -1,8 +1,6 @@
 function G = getGlobalsPop()
 %% Global Parameters
-G.Fidelity = 1;
-G.Linewidth = 1;
-G.DecayTime = 35;
+G.DecayTime = 30;
 G.I = 3/2;
 G.J = 1/2;
 G.Jp = 5/2;

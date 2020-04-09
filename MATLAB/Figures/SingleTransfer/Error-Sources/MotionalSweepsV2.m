@@ -14,10 +14,13 @@ function [Prob] = MotionalSweepsV2(Freq, SweepRatesRabi, RabiFreqs, Detuning)
 %RabiFreqs: vector of all rabi frequencies
 %Detuning: initial detuning for a wanted transition
 
+%Get the session global variables
+[GeomOrientation, CarrierFreq, Detuning, Linewidth, F] = getVarGlobalsErrorSources();
 
 G = getGlobalsPop();
+
 DetuningMotional = min(abs(Detuning -Freq(1)), abs(Detuning + Freq(1)));
 Order = abs(Freq(15));
-prob = Prob5_v2(G.Linewidth, RabiFreqs, SweepRatesRabi, DetuningMotional, G.Fidelity, Order);
+prob = Prob5_v2(Linewidth, RabiFreqs, SweepRatesRabi, DetuningMotional, G.Fidelity, Order);
 Prob = (1-prob);
 end

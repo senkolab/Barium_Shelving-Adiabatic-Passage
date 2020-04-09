@@ -4,8 +4,6 @@ addpath('..\..\..\Functions\Frequencies_EnergyStructure', ...
     '..\..\..\altmany-export_fig-9502702');
 %Constants of the experiment
 %Constants of the experiment
-%Decay time of metastable state
-DecayTime = 35;
 
 %Geometric orientation - XZ, Orthogonal, or Average
 GeomOrientation = "XZ";
@@ -13,10 +11,10 @@ GeomOrientation = "XZ";
 CarrierFreq = -1130e6;
 Detuning = 1.3e6;
 %Tau = 5;%5 Hz Linewidth
-Linewidth = 1;
+Linewidth = 2;
 %Fidelity
 F = 1;
-SavePDF = false;
+SavePDF = true;
 
 %Set variational global variables
 setVarGlobalsPop(GeomOrientation, CarrierFreq, Detuning, Linewidth, F);
@@ -33,8 +31,8 @@ LevelsG = G.Levels3G;
 LevelsP = G.Levels3P;
 Level1 = [2 0];
 Level2 = [2 0];
-SavePDFName = sprintf("SingleTransfer_%s_%g_MHz_%gMHz_F=%i_mF=%i_Fp=%i_mFp=%i",...
-    GeomOrientation, CarrierFreq*1e-6, Detuning*1e-6, Level1(1), Level1(2), Level2(1), Level2(2));
+SavePDFName = sprintf("SingleTransfer_%s_%g_MHzCarrier_%gMHzDetuning_%gLinewidth_F=%i_mF=%i_Fp=%i_mFp=%i",...
+    GeomOrientation, CarrierFreq*1e-6, Detuning*1e-6, Linewidth, Level1(1), Level1(2), Level2(1), Level2(2));
 SavePDFName = strrep(SavePDFName, ".", "p");
 [Probs, TotalTime] = TransferProbV2(G, Sweep, Rabi, 3, Level1, Level2, LevelsG, LevelsP);
 ProbabilityCutoff = G.Thresh;

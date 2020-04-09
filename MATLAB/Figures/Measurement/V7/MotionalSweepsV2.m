@@ -1,4 +1,4 @@
-function [Prob] = MotionalSweepsV2(Freq, SweepRatesRabi, RabiFreqs, Detuning)
+function [Prob] = MotionalSweepsV2(Freq, SweepRatesRabi, RabiFreqs)
 %This function calculates the error from driving a motional sideband
 %coherently. The inputs are:
 %Freq: contains information on the desired transition that this unwanted transition
@@ -14,10 +14,12 @@ function [Prob] = MotionalSweepsV2(Freq, SweepRatesRabi, RabiFreqs, Detuning)
 %RabiFreqs: vector of all rabi frequencies
 %Detuning: initial detuning for a wanted transition
 
+%Get the session global variables
+[GeomOrientation, CarrierFreq, Detuning, Linewidth, F] = getVarGlobals();
 
 G = getGlobals_V2();
 DetuningMotional = min(abs(Detuning -Freq(1)), abs(Detuning + Freq(1)));
 Order = abs(Freq(15));
-prob = Prob5_v2(G.Linewidth, RabiFreqs, SweepRatesRabi, DetuningMotional, G.Fidelity, Order);
+prob = Prob5_v2(Linewidth, RabiFreqs, SweepRatesRabi, DetuningMotional, F, Order);
 Prob = (1-prob);
 end
