@@ -17,6 +17,7 @@ G.LZExp = pi^2;
 G.OffResErrorOn = true;
 G.MotionalErrorOn = true;
 G.DecayTimeErrorOn = true;
+G.FluorescenceErrorOn = true;
 G.Thresh = 0.975;
 
 G.ThreeColor = [128 0 132]/255;
@@ -41,6 +42,7 @@ AssumedFluorescenceFreq = SaturationFluorescenceFreq/4;
 DetectionRate = AssumedFluorescenceFreq*G.PercentCollected*QE;
 PhotonsToCollect = 10;
 G.FluorescenceTime = PhotonsToCollect/DetectionRate;
+G.FluorescenceError = 2.9e-4;
 
 %% Frequency Information
 %detuning frequency of -1092 MHz results in many more overlaps in

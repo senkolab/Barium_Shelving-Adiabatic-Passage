@@ -21,7 +21,7 @@ G.EncodedColors = [[158 188 218];[77 0 75];[140 150 198];[140 107 177];[136 65 1
 G.OtherColors = [[253 187 132];[252 141 89];[239 101 72];[179 0 0];[127 0 0]]/255;
 
 G.TextHeight = 0.02;
-G.TextFontSize = 6;
+G.TextFontSize = 8;
 G.TextOffSet = 0;
 G.ShowRelevantText = true;
 G.ShowIrrelevantText = false;
@@ -54,7 +54,7 @@ G.MotionalHeightTwo = G.Eta^2;
 G.ScaleX = 1e-6;
 
 G.ThreeLevelGraphCut = 1.2;
-G.FiveLevelGraphCut = 0.7;
+G.FiveLevelGraphCut = 0.8;
 G.SevenLevelGraphCut = 1.2;
 G.GraphCut = [G.ThreeLevelGraphCut G.FiveLevelGraphCut G.SevenLevelGraphCut];
 

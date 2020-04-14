@@ -17,7 +17,7 @@ function [Prob] = MotionalSweepsV2(Freq, SweepRatesRabi, RabiFreqs)
 %Get the session global variables
 [GeomOrientation, CarrierFreq, Detuning, Linewidth, F] = getVarGlobals();
 
-G = getGlobals_V2();
+G = getGlobals_V3();
 DetuningMotional = max(abs(Detuning -Freq(1)), abs(Detuning + Freq(1)));
 Order = abs(Freq(15));
 prob = Prob5_v2(Linewidth, RabiFreqs, SweepRatesRabi, DetuningMotional, F, Order);
