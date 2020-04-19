@@ -1,7 +1,7 @@
 %This function does not have off-resonant error
-function[Prob] = Prob5_v2(Linewidth, Rabi, Sweep, Detuning, Fidelity, SidebandOrder)
+function[Prob] = Prob5_v2(Linewidth, Rabi, Sweep, Detuning, Fidelity, SidebandOrder, Clebsch)
 eta = 0.0246;
-Rabi = Rabi*eta^SidebandOrder;
+Rabi = Clebsch*Rabi*eta^SidebandOrder;
 %Theta calculation at initial detuning
 Theta = 1/2*atan(Rabi/Detuning);
 %Initial adiabatic state error based on detuning not being infinite

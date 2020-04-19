@@ -23,7 +23,7 @@ Graph5 = true;
 Graph7 = true;
 Graph = Graph3 || Graph5 || Graph7;
 ShowWorst = false;
-SavePDF = true;
+SavePDF = false;
 SavePDFName = sprintf("Measurement%s_%gMHzCarrier_%gMHzDetuning_%gHz", GeomOrientation, CarrierFreq*1e-6, Detuning*1e-6, Linewidth);
 SavePDFName = strrep(SavePDFName, ".", "p");
 

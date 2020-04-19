@@ -18,8 +18,15 @@ function [Prob] = MotionalSweepsV2(Freq, SweepRatesRabi, RabiFreqs)
 [GeomOrientation, CarrierFreq, Detuning, Linewidth, F] = getVarGlobals();
 
 G = getGlobals_V3();
+disp(Freq(14));
 DetuningMotional = max(abs(Detuning -Freq(1)), abs(Detuning + Freq(1)));
+Clebsch = Freq(14);
+%Calculate the normalization coefficient to normalize to the transition of
+%interest
+ClebschMainNormal = 1/Clebsch;
+%Multiply all coefficients of Clebsch by the normalization constant
+Clebsch = Clebsch*ClebschMainNormal;
 Order = abs(Freq(15));
-prob = Prob5_v2(Linewidth, RabiFreqs, SweepRatesRabi, DetuningMotional, F, Order);
+prob = Prob5_v2(Linewidth, RabiFreqs, SweepRatesRabi, DetuningMotional, F, Order, Clebsch);
 Prob = (1-prob);
 end

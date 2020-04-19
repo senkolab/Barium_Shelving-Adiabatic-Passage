@@ -3484,11 +3484,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2"
-     inkscape:cx="300.92632"
-     inkscape:cy="440.45235"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="19.519034"
+     inkscape:cy="365.66706"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer7"
+     inkscape:current-layer="layer2"
      showgrid="false"
      inkscape:window-width="3650"
      inkscape:window-height="2104"
@@ -3503,7 +3503,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -3548,37 +3548,37 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="-159.39172"
+       x="-248.29057"
        y="13.934842"
        id="text1337"
        inkscape:export-xdpi="100.92452"
        inkscape:export-ydpi="100.92452"><tspan
          sodipodi:role="line"
          id="tspan1335"
-         x="-159.39172"
+         x="-248.29057"
          y="13.934842"
          style="stroke-width:0.26458332"
          dx="0 0 0 0 0 0 0 0 0 0 0.37417734">Blue-Green-Purple: Encoded</tspan><tspan
          sodipodi:role="line"
-         x="-159.39172"
+         x="-248.29057"
          y="27.164009"
          style="stroke-width:0.26458332"
          dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.37417734"
          id="tspan1339">Red-Orange-Yellow: Other+Motional</tspan><tspan
          sodipodi:role="line"
-         x="-159.39172"
+         x="-248.29057"
          y="40.393173"
          style="stroke-width:0.26458332"
          dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.37417734"
          id="tspan1341">Symbols: Denote which Other+Motional</tspan><tspan
          sodipodi:role="line"
-         x="-159.39172"
+         x="-248.29057"
          y="53.622341"
          style="stroke-width:0.26458332"
          dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.37417734"
          id="tspan1343">is driven by which Encoded</tspan><tspan
          sodipodi:role="line"
-         x="-159.39172"
+         x="-248.29057"
          y="66.851509"
          style="stroke-width:0.26458332"
          dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.37417734"
@@ -5329,7 +5329,7 @@
      inkscape:groupmode="layer"
      id="layer10"
      inkscape:label="5-Level_Hide_-1130MHz"
-     style="display:none"
+     style="display:inline"
      transform="translate(-30.376293,-16.771632)">
     <path
        style="display:inline;fill:none;stroke:#88419d;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Lstart-4-0-4);marker-end:url(#Arrow1Lend-8-5-5)"
@@ -5516,103 +5516,103 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05555534px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="-144.48148"
+       x="-233.38033"
        y="75.150764"
        id="text8071-1"
        inkscape:export-xdpi="100.92452"
        inkscape:export-ydpi="100.92452"><tspan
          sodipodi:role="line"
-         x="-144.48148"
+         x="-233.38033"
          y="75.150764"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8073-7">By moving the carrier frequency to -1130MHz, we've gotten rid of </tspan><tspan
          sodipodi:role="line"
-         x="-144.48148"
+         x="-233.38033"
          y="83.970207"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan15195">two of the motional sidebands. Now, using swapping, we can</tspan><tspan
          sodipodi:role="line"
-         x="-144.48148"
+         x="-233.38033"
          y="92.78965"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8085-1">do the entire thing without driving any motional sidebands.</tspan><tspan
          sodipodi:role="line"
-         x="-144.48148"
+         x="-233.38033"
          y="101.6091"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8089-1">1: Drive 1.p1:p1 up, No others driven</tspan><tspan
          sodipodi:role="line"
-         x="-144.48148"
+         x="-233.38033"
          y="110.42854"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8093-6">2: Drive 1.n1:n1 up, No others driven</tspan><tspan
          sodipodi:role="line"
-         x="-144.48148"
+         x="-233.38033"
          y="119.24799"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8095-5">3: Move encoded state down into F=1, mF = -1 to avoid</tspan><tspan
          sodipodi:role="line"
-         x="-144.48148"
+         x="-233.38033"
          y="128.06743"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8097-4">it being driven by next step</tspan><tspan
          sodipodi:role="line"
-         x="-144.48148"
+         x="-233.38033"
          y="136.88687"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8101-9">4: Drive 2.p2:p2 up, No others driven </tspan><tspan
          sodipodi:role="line"
-         x="-144.48148"
+         x="-233.38033"
          y="145.70631"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8103-2">5: Drive 2.p0:p0 up, No others driven</tspan><tspan
          sodipodi:role="line"
-         x="-144.48148"
+         x="-233.38033"
          y="154.52576"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8105-6">5F: Fluoresce F=2, mF = -2 - don't even need to move it back </tspan><tspan
          sodipodi:role="line"
-         x="-144.48148"
+         x="-233.38033"
          y="163.3452"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan15250">beforehand</tspan><tspan
          sodipodi:role="line"
-         x="-144.48148"
+         x="-233.38033"
          y="172.16466"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8111-8">6: Drive 2.p0:p0 down, No others driven</tspan><tspan
          sodipodi:role="line"
-         x="-144.48148"
+         x="-233.38033"
          y="180.9841"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8113-3">6F: Fluoresce F=2, mF = 0</tspan><tspan
          sodipodi:role="line"
-         x="-144.48148"
+         x="-233.38033"
          y="189.80354"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8131-3">7: Drive 2.n1:n1, No others driven</tspan><tspan
          sodipodi:role="line"
-         x="-144.48148"
+         x="-233.38033"
          y="198.62299"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8115-3">7F: Fluoresce F=1, mF = -1</tspan><tspan
          sodipodi:role="line"
-         x="-144.48148"
+         x="-233.38033"
          y="207.44243"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8109-8">8: Drive 1.p1:p1, No others driven </tspan><tspan
          sodipodi:role="line"
-         x="-144.48148"
+         x="-233.38033"
          y="216.26187"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8117-4">8F: Fluoresce F=1, mF = +1</tspan><tspan
          sodipodi:role="line"
-         x="-144.48148"
+         x="-233.38033"
          y="225.08131"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8119-1">9Done: Remaining shelved state is last one, if </tspan><tspan
          sodipodi:role="line"
-         x="-144.48148"
+         x="-233.38033"
          y="233.90076"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8121-4">haven't seen fluorescence yet, it's in this state</tspan></text>
@@ -5937,7 +5937,7 @@
      inkscape:groupmode="layer"
      id="layer14"
      inkscape:label="5-LasersOver"
-     style="display:none">
+     style="display:inline">
     <path
        transform="translate(14.623707)"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.40000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;enable-background:new"
@@ -6073,7 +6073,7 @@
      inkscape:groupmode="layer"
      id="layer7"
      inkscape:label="7-Level_Hide_-1130MHz"
-     style="display:inline"
+     style="display:none"
      transform="translate(-30.376293,-16.771632)">
     <path
        style="display:inline;fill:none;stroke:#8c6bb1;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Lstart-4-2-7-7);marker-end:url(#Arrow1Lend-8-1-1-0)"
@@ -6082,7 +6082,7 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <path
-       style="display:inline;fill:none;stroke:#fdbb84;stroke-width:0.60000003;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:7.20000035,7.20000035;stroke-opacity:1;marker-start:url(#Arrow1Lstart-4-5-8-6-3);marker-end:url(#Arrow1Lend-8-9-71-2-0);stroke-dashoffset:0"
+       style="display:inline;fill:none;stroke:#fdbb84;stroke-width:0.60000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:7.20000035, 7.20000035;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Arrow1Lstart-4-5-8-6-3);marker-end:url(#Arrow1Lend-8-9-71-2-0)"
        d="M 128.09334,53.062665 79.161786,183.84431"
        id="path10081-3-6-88-1-9"
        inkscape:connector-curvature="0"
@@ -6094,7 +6094,7 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <path
-       style="display:inline;fill:none;stroke:#fc8d59;stroke-width:0.60000003;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:7.20000035,7.20000035;stroke-opacity:1;marker-start:url(#Arrow1Lstart-4-5-3);marker-end:url(#Arrow1Lend-8-9-75);stroke-dashoffset:0"
+       style="display:inline;fill:none;stroke:#fc8d59;stroke-width:0.60000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:7.20000035, 7.20000035;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Arrow1Lstart-4-5-3);marker-end:url(#Arrow1Lend-8-9-75)"
        d="M 102.86846,57.707783 53.235704,188.60302"
        id="path10081-3-6-1"
        inkscape:connector-curvature="0"
@@ -6131,13 +6131,13 @@
        x="91.344666"
        y="82.425072" />
     <path
-       style="display:inline;fill:none;stroke:#8c6bb1;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.30000001,0.30000001;stroke-opacity:1;marker-start:url(#Arrow1Lstart-4-2-7-7-8);marker-end:url(#Arrow1Lend-8-1-1-0-9);stroke-dashoffset:0"
+       style="display:inline;fill:none;stroke:#8c6bb1;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.30000001, 0.30000001;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Arrow1Lstart-4-2-7-7-8);marker-end:url(#Arrow1Lend-8-1-1-0-9)"
        d="M 158.46411,47.572281 V 169.11853"
        id="path10081-3-9-2-3-7"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <path
-       style="display:inline;fill:none;stroke:#88419d;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.30000001,0.30000001;stroke-opacity:1;marker-start:url(#Arrow1Lstart-4-2-7-7-5-1);marker-end:url(#Arrow1Lend-8-1-1-0-2-4);stroke-dashoffset:0"
+       style="display:inline;fill:none;stroke:#88419d;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.30000001, 0.30000001;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Arrow1Lstart-4-2-7-7-5-1);marker-end:url(#Arrow1Lend-8-1-1-0-2-4)"
        d="m 132.86761,52.388533 1.8e-4,121.607097"
        id="path10081-3-9-2-3-0-3"
        inkscape:connector-curvature="0"
@@ -6149,13 +6149,13 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <path
-       style="display:inline;fill:none;stroke:#8c96c6;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.30000001,0.30000001;stroke-opacity:1;marker-start:url(#Arrow1Lstart-4-2-4-0-1);marker-end:url(#Arrow1Lend-8-1-6-0-1);stroke-dashoffset:0"
+       style="display:inline;fill:none;stroke:#8c96c6;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.30000001, 0.30000001;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Arrow1Lstart-4-2-4-0-1);marker-end:url(#Arrow1Lend-8-1-6-0-1)"
        d="M 81.512751,62.334278 V 184.17395"
        id="path10081-3-9-7-7-3"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <path
-       style="display:inline;fill:none;stroke:#ef6548;stroke-width:0.60000003;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:7.20000035,7.20000035;stroke-opacity:1;marker-start:url(#Arrow1Lstart-4-5-2-6-5);marker-end:url(#Arrow1Lend-8-9-7-46-4);stroke-dashoffset:0"
+       style="display:inline;fill:none;stroke:#ef6548;stroke-width:0.60000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:7.20000035, 7.20000035;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Arrow1Lstart-4-5-2-6-5);marker-end:url(#Arrow1Lend-8-9-7-46-4)"
        d="M 103.76964,57.631524 152.34555,168.56724"
        id="path10081-3-6-8-51-7"
        inkscape:connector-curvature="0"
@@ -6247,7 +6247,7 @@
        x="156.96411"
        y="81.403633" />
     <path
-       style="display:inline;fill:none;stroke:#810f7c;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.30000001,0.30000001;stroke-opacity:1;marker-start:url(#Arrow1Lstart-4-2-4-5);marker-end:url(#Arrow1Lend-8-1-6-5);stroke-dashoffset:0"
+       style="display:inline;fill:none;stroke:#810f7c;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.30000001, 0.30000001;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Arrow1Lstart-4-2-4-5);marker-end:url(#Arrow1Lend-8-1-6-5)"
        d="M 103.39763,57.178616 V 179.54746"
        id="path10081-3-9-7-9"
        inkscape:connector-curvature="0" />
@@ -7325,7 +7325,7 @@
      inkscape:groupmode="layer"
      id="layer13"
      inkscape:label="7-LasersOver"
-     style="display:inline">
+     style="display:none">
     <text
        transform="translate(14.623707)"
        xml:space="preserve"
