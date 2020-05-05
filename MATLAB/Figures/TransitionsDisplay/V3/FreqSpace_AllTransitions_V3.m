@@ -4,14 +4,14 @@ addpath('..\..\..\Functions\Frequencies_EnergyStructure', '..\..\..\altmany-expo
 Worst = false;
 MeasurementSequence = false;
 MeasurementManual = false;
-SavePDF = false;
+SavePDF = true;
 TitleDisplay = false;
 
 %3, 5, or 7
 Levels = 5;
 %"XZ", "Orthogonal", or "Average"
 GeomOrientation = "XZ";
-CarrierFreq = -1092e6;
+CarrierFreq = -1130e6;
 Detuning = 1.3e6;
 G = getGlobals_V3();
 SavePDFName = sprintf("%s_%gMHz_%i-Level_%gMHz", GeomOrientation, CarrierFreq*1e-6, Levels, Detuning*1e-6);

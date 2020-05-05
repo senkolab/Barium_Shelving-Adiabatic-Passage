@@ -1,4 +1,4 @@
-function G = getGlobals_V2()
+function G = getGlobals_V3()
 %% Global Parameters
 G.DecayTime = 30;
 G.I = 3/2;

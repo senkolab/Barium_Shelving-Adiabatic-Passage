@@ -22,20 +22,22 @@ if Trans(7) == 0
         LineWidth = G.EncodedLineWidth;
         LineStyle = G.EncodedLineStyle;
         Alpha = G.EncodedAlpha;
-        if GeomOrientation == "XZ" || GeomOrientation == "Average"
-            TextString = ['F = ' num2str(Trans(2)) ', m_F = ' num2str(Trans(3))];
-        elseif GeomOrientation == "Orthogonal"
-            TextString = ['F = ' num2str(Trans(2)) ', m_F = ' num2str(Trans(3)) ', F'' = ' num2str(Trans(4)) ', m_{F''} = ' num2str(Trans(5))];
-        end
+%         if GeomOrientation == "XZ" || GeomOrientation == "Average"
+%             %TextString = ['F = ' num2str(Trans(2)) ', m_F = ' num2str(Trans(3))];
+%             TextString = sprintf("(%i, %i)\leftrightarrow (%i, %i)'", num2str(Trans(2)), num2str(Trans(3)), num2str(Trans(4)), num2str(Trans(5)));
+%         elseif GeomOrientation == "Orthogonal"
+%             TextString = ['F = ' num2str(Trans(2)) ', m_F = ' num2str(Trans(3)) ', F'' = ' num2str(Trans(4)) ', m_{F''} = ' num2str(Trans(5))];
+%         end
     %Other transition?
     else
         ShowArea = false;
-        TextString = ['F = ' num2str(Trans(2)) ', m_F = ' num2str(Trans(3)) ', F'' = ' num2str(Trans(4)) ', m_{F''} = ' num2str(Trans(5))];
+        %TextString = ['F = ' num2str(Trans(2)) ', m_F = ' num2str(Trans(3)) ', F'' = ' num2str(Trans(4)) ', m_{F''} = ' num2str(Trans(5))];
         LineWidth = G.OtherLineWidth;
         LineStyle = G.OtherLineStyle;
         Alpha = G.OtherAlpha;
     end
-%Motional sideband transition?
+    TextString = sprintf('(%+i, %+i)\\leftrightarrow (%+i, %+i)''', Trans(2), Trans(3), Trans(4), Trans(5));
+    %Motional sideband transition?
 else
     %We don't need to show the area or text for motional sidebands
     ShowArea = false;
