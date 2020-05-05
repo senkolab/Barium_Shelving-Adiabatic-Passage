@@ -1,4 +1,4 @@
-function [Prob, TotalTime] = TransferProbV2(G, SweepRates, RabiFreqs, Levels, Level1, Level2, LevelsG, LevelsP, Single)
+function [Prob, TotalTime, FreqDoing] = TransferProbV2(G, SweepRates, RabiFreqs, Levels, Level1, Level2, LevelsG, LevelsP, Single)
 %This function gives the probability of a transfer
 %The outputs are the probabilities of the transfer for different rabi rates,
 %sweep rates, and the time for each of these probabilities
@@ -115,4 +115,5 @@ TotalTime = TotalTime + TransferTime;
 if G.DecayTimeErrorOn
     Prob = Prob.*exp(-TransferTime/G.DecayTime);
 end
+FreqDoing = FreqDoing(1);
 end

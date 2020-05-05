@@ -65,14 +65,14 @@ if Graph3
     "Fluoresce", 2, 2;...%3
     "Deshelve", 5, 5;...%4
     "Fluoresce", 5, 5];%5
-    [Line3, ProbIdeal3Level, TotalTime3Level, ProbsIdealTransfer3Level, SweepIdealTransfer3Level] = ...
+    [Line3, ProbIdeal3Level, TotalTime3Level, ShelvingSpecs3Level] = ...
         GraphMeasurement_V3(3, false, Rabi, Sweep, ThreeBestMeasurement);
     Leg{numGraphs} = '3 level';
     numGraphs = numGraphs + 1;
     %No motional sidebands, so no worst measurement
     ThreeWorstMeasurement = [];
     if ShowWorst && ~isempty(ThreeWorstMeasurement)
-        [Line3W, ProbIdeal3LevelW, TotalTime3LevelW, ProbsIdealTransfer3LevelW, SweepIdealTransfer3LevelW] = ...
+        [Line3W, ProbIdeal3LevelW, TotalTime3LevelW, ShelvingSpecs3LevelW] = ...
             GraphMeasurement_V3(3, true, Rabi, Sweep, ThreeWorstMeasurement);
         Leg{numGraphs} = '3 level worst';
         numGraphs = numGraphs + 1;
@@ -96,7 +96,7 @@ if Graph5
         "Deshelve" 6 6;...
         "Fluoresce" 6 6
         ];
-    [Line5, ProbIdeal5Level, TotalTime5Level] = ...
+    [Line5, ProbIdeal5Level, TotalTime5Level, ShelvingSpecs5Level] = ...
         GraphMeasurement_V3(5, false, Rabi, Sweep, FiveBestMeasurement);
     Leg{numGraphs} = '5 level';
     numGraphs = numGraphs + 1;
@@ -114,7 +114,7 @@ if Graph5
         "Fluoresce" 5 5];
     if ShowWorst && ~isempty(FiveWorstMeasurement)
         %Drive a carrier twice, a first order motional sideband twice
-        [Line5W, ProbIdeal5LevelW, TotalTime5LevelW] = ...
+        [Line5W, ProbIdeal5LevelW, TotalTime5LevelW, ShelvingSpecs5LevelW] = ...
             GraphMeasurement_V3(5, true, Rabi, Sweep, FiveWorstMeasurement);
         Leg{numGraphs} = '5 level worst';
         numGraphs = numGraphs + 1;
@@ -144,14 +144,14 @@ if Graph7
         "Fluoresce" 7 7;...
         "Deshelve" 8 8;...
         "Fluoresce" 8 8];
-    [Line7, ProbIdeal7Level, TotalTime7Level, ProbsIdealTransfer, SweepRatesIdealTransfer] = ...
+    [Line7, ProbIdeal7Level, TotalTime7Level, ShelvingSpecs7Level] = ...
         GraphMeasurement_V3(7, false, Rabi, Sweep, SevenBestMeasurement);
     Leg{numGraphs} = '7 level';
     numGraphs = numGraphs + 1;
     SevenWorstMeasurement = [];
     if ShowWorst && ~isempty(SevenWorstMeasurement)
         %Drive a carrier twice, a first order motional sideband twice
-        [Line7W, ProbIdeal7LevelW, TotalTime7LevelW] = ...
+        [Line7W, ProbIdeal7LevelW, TotalTime7LevelW, Shelvingspecs7LevelW] = ...
             GraphMeasurement_V3(7, true, Rabi, Sweep, SevenWorstMeasurement);
         Leg{numGraphs} = '7 level worst';
         numGraphs = numGraphs + 1;
