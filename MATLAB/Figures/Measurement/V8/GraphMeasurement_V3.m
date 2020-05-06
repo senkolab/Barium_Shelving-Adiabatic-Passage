@@ -265,7 +265,6 @@ for i = 1:size(Measurement, 1)
         fprintf("Initial frequency: %f MHz\nFinal frequency: %f MHz\n", FreqInitIdealTransfer(i)*1e-6, FreqFinalIdealTransfer(i)*1e-6);
         fprintf("The transfer took %f ms.\n\n\n", TotalTimeIdealTransfer(i)*1e3);
     elseif Type == "Hide"
-        disp(Freq);
         RabiIdealTransfer(i) = 0;
         ProbIdealTransfer(i) = 0;
         SweepRateIdealTransfer(i) = 0;
