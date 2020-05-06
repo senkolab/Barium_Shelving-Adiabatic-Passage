@@ -259,11 +259,11 @@ for i = 1:size(Measurement, 1)
         FreqInitIdealTransfer(i) = FreqWhich - Detuning;
         FreqFinalIdealTransfer(i) = FreqWhich + Detuning;
         FreqsInitFinal(i,:) = [FreqInitIdealTransfer(i) FreqFinalIdealTransfer(i)];
-        TotalTimeIdealTransfer(i) = Detuning*1e3./SweepRateIdealTransfer(i);
+        TotalTimeIdealTransfer(i) = Detuning./SweepRateIdealTransfer(i);
         fprintf("The best fidelity for this transfer is %f%%\n", maxx*100);
         fprintf("This optimal transfer used a Rabi frequency of %f kHz and a sweep rate of %f MHz/ms.\n", Rabi(index)*1e-3, SweepRateIdealTransfer(i)*1e-9);
         fprintf("Initial frequency: %f MHz\nFinal frequency: %f MHz\n", FreqInitIdealTransfer(i)*1e-6, FreqFinalIdealTransfer(i)*1e-6);
-        fprintf("The transfer took %f ms.\n\n\n", TotalTimeIdealTransfer(i));
+        fprintf("The transfer took %f ms.\n\n\n", TotalTimeIdealTransfer(i)*1e3);
     elseif Type == "Hide"
         disp(Freq);
         RabiIdealTransfer(i) = 0;
