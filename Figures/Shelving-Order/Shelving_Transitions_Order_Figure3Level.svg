@@ -18,7 +18,10 @@
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
    sodipodi:docname="Shelving_Transitions_Order_Figure.svg"
    style="enable-background:new"
-   enable-background="new">
+   enable-background="new"
+   inkscape:export-filename="C:\Users\brend\Desktop\Repositories\Barium_Shelving-Adiabatic-Passage\Figures\Shelving-Order\Shelving_Transitions_Order_Figure_3Level.png"
+   inkscape:export-xdpi="100.92452"
+   inkscape:export-ydpi="100.92452">
   <defs
      id="defs9315">
     <inkscape:path-effect
@@ -3485,8 +3488,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4142136"
-     inkscape:cx="19.519034"
-     inkscape:cy="365.66706"
+     inkscape:cx="-189.81707"
+     inkscape:cy="365.64683"
      inkscape:document-units="mm"
      inkscape:current-layer="layer2"
      showgrid="false"
@@ -3548,38 +3551,38 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="-248.29057"
-       y="13.934842"
+       x="-112.27711"
+       y="29.463202"
        id="text1337"
        inkscape:export-xdpi="100.92452"
        inkscape:export-ydpi="100.92452"><tspan
          sodipodi:role="line"
          id="tspan1335"
-         x="-248.29057"
-         y="13.934842"
+         x="-112.27711"
+         y="29.463202"
          style="stroke-width:0.26458332"
          dx="0 0 0 0 0 0 0 0 0 0 0.37417734">Blue-Green-Purple: Encoded</tspan><tspan
          sodipodi:role="line"
-         x="-248.29057"
-         y="27.164009"
+         x="-112.27711"
+         y="42.692368"
          style="stroke-width:0.26458332"
          dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.37417734"
          id="tspan1339">Red-Orange-Yellow: Other+Motional</tspan><tspan
          sodipodi:role="line"
-         x="-248.29057"
-         y="40.393173"
+         x="-112.27711"
+         y="55.921532"
          style="stroke-width:0.26458332"
          dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.37417734"
          id="tspan1341">Symbols: Denote which Other+Motional</tspan><tspan
          sodipodi:role="line"
-         x="-248.29057"
-         y="53.622341"
+         x="-112.27711"
+         y="69.150703"
          style="stroke-width:0.26458332"
          dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.37417734"
          id="tspan1343">is driven by which Encoded</tspan><tspan
          sodipodi:role="line"
-         x="-248.29057"
-         y="66.851509"
+         x="-112.27711"
+         y="82.379868"
          style="stroke-width:0.26458332"
          dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.37417734"
          id="tspan1345">Line Thickness: Motional Order</tspan></text>
@@ -3728,30 +3731,38 @@
      inkscape:groupmode="layer"
      id="layer6"
      inkscape:label="3-Level_-1092MHz"
-     style="display:none"
+     style="display:inline"
      transform="translate(-30.376293,-16.771632)">
     <path
        style="fill:none;stroke:#1d9eff;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Lstart-4-4-8);marker-end:url(#Arrow1Lend-8-0-7)"
        d="M 79.055968,33.069546 V 227.99817"
        id="path10081-3-2-3"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="100.92452"
+       inkscape:export-ydpi="100.92452" />
     <path
        style="fill:none;stroke:#006320;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Lstart-4-2-8-4);marker-end:url(#Arrow1Lend-8-1-7-9)"
        d="M 129.06222,22.075468 V 238.81412"
        id="path10081-3-9-3-2"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="100.92452"
+       inkscape:export-ydpi="100.92452" />
     <path
        style="fill:none;stroke:#ff7d00;stroke-width:0.60000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Lstart-4-5-2-3);marker-end:url(#Arrow1Lend-8-9-7-4)"
        d="M 79.055968,33.069546 129.08709,173.90318"
        id="path10081-3-6-8-5"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
+       sodipodi:nodetypes="cc"
+       inkscape:export-xdpi="100.92452"
+       inkscape:export-ydpi="100.92452" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        x="125.99251"
        y="211.40375"
-       id="text10189-4-2"><tspan
+       id="text10189-4-2"
+       inkscape:export-xdpi="100.92452"
+       inkscape:export-ydpi="100.92452"><tspan
          sodipodi:role="line"
          x="125.99251"
          y="211.40375"
@@ -3763,25 +3774,33 @@
        cx="90.962219"
        cy="66.703133"
        rx="1.4552083"
-       ry="1.5875" />
+       ry="1.5875"
+       inkscape:export-xdpi="100.92452"
+       inkscape:export-ydpi="100.92452" />
     <ellipse
        style="fill:none;fill-opacity:0.97647059;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path10264-9-3"
        cx="78.989822"
        cy="78.278656"
        rx="1.4552083"
-       ry="1.5875" />
+       ry="1.5875"
+       inkscape:export-xdpi="100.92452"
+       inkscape:export-ydpi="100.92452" />
     <path
        style="fill:none;stroke:#00ff53;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Lstart-4-2-6);marker-end:url(#Arrow1Lend-8-1-2)"
        d="M 104.72055,56.649449 V 179.01829"
        id="path10081-3-9-9"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="100.92452"
+       inkscape:export-ydpi="100.92452" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        x="101.39299"
        y="156.97569"
-       id="text10189-0"><tspan
+       id="text10189-0"
+       inkscape:export-xdpi="100.92452"
+       inkscape:export-ydpi="100.92452"><tspan
          sodipodi:role="line"
          id="tspan10187-5"
          x="101.39299"
@@ -3792,7 +3811,9 @@
        d="M 154.19763,46.727569 104.72055,179.01829"
        id="path10081-3-6-88-3"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
+       sodipodi:nodetypes="cc"
+       inkscape:export-xdpi="100.92452"
+       inkscape:export-ydpi="100.92452" />
     <path
        sodipodi:type="star"
        style="display:inline;fill:none;fill-opacity:0.97647059;stroke:#000000;stroke-width:2.23226857;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -3810,7 +3831,9 @@
        d="m 77.919787,74.485415 1.439562,2.71837 3.055439,0.355209 -2.140475,2.209128 0.60636,3.015659 -2.762449,-1.353053 -2.680688,1.508572 0.433188,-3.045362 -2.263116,-2.083311 3.030173,-0.529083 z"
        inkscape:transform-center-x="0.018351773"
        inkscape:transform-center-y="-0.18027047"
-       transform="matrix(0.44892534,0,0,0.44702619,94.025124,38.092967)" />
+       transform="matrix(0.44892534,0,0,0.44702619,94.025124,38.092967)"
+       inkscape:export-xdpi="100.92452"
+       inkscape:export-ydpi="100.92452" />
     <path
        sodipodi:type="star"
        style="display:inline;fill:none;fill-opacity:0.97647059;stroke:#000000;stroke-width:2.23226857;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -3828,13 +3851,17 @@
        d="m 77.919787,74.485415 1.439562,2.71837 3.055439,0.355209 -2.140475,2.209128 0.60636,3.015659 -2.762449,-1.353053 -2.680688,1.508572 0.433188,-3.045362 -2.263116,-2.083311 3.030173,-0.529083 z"
        inkscape:transform-center-x="0.018351773"
        inkscape:transform-center-y="-0.18027047"
-       transform="matrix(0.44892534,0,0,0.44702619,107.45681,41.988932)" />
+       transform="matrix(0.44892534,0,0,0.44702619,107.45681,41.988932)"
+       inkscape:export-xdpi="100.92452"
+       inkscape:export-ydpi="100.92452" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        x="101.24332"
        y="85.049957"
-       id="text10189-4-2-9"><tspan
+       id="text10189-4-2-9"
+       inkscape:export-xdpi="100.92452"
+       inkscape:export-ydpi="100.92452"><tspan
          sodipodi:role="line"
          x="101.24332"
          y="85.049957"
@@ -3843,42 +3870,44 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05555534px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="-104.23927"
-       y="87.491356"
-       id="text4873-2"><tspan
+       x="-80.104836"
+       y="130.52174"
+       id="text4873-2"
+       inkscape:export-xdpi="100.92452"
+       inkscape:export-ydpi="100.92452"><tspan
          sodipodi:role="line"
          id="tspan4871-4"
-         x="-104.23927"
-         y="87.491356"
+         x="-80.104836"
+         y="130.52174"
          style="font-size:5.29166651px;stroke-width:0.26458332">1: Drive 2.p0:p0, No others driven</tspan><tspan
          sodipodi:role="line"
-         x="-104.23927"
-         y="96.310799"
+         x="-80.104836"
+         y="139.34119"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan4875-0">2: Drive 1.p1:p1, No others driven (since depopulated F=2, mF = 0)</tspan><tspan
          sodipodi:role="line"
-         x="-104.23927"
-         y="105.13024"
+         x="-80.104836"
+         y="148.16063"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8223">2F: Fluoresce F=1, mF=-1</tspan><tspan
          sodipodi:role="line"
-         x="-104.23927"
-         y="113.94969"
+         x="-80.104836"
+         y="156.98009"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan4879-5">3: Drive 2.p0:p0, No others driven</tspan><tspan
          sodipodi:role="line"
-         x="-104.23927"
-         y="122.76913"
+         x="-80.104836"
+         y="165.79951"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8141-3">3F: Fluoresce F=2, mF=0</tspan><tspan
          sodipodi:role="line"
-         x="-104.23927"
-         y="131.58858"
+         x="-80.104836"
+         y="174.61896"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8143-1">4Done: Remaining shelved state is last one, if </tspan><tspan
          sodipodi:role="line"
-         x="-104.23927"
-         y="140.40802"
+         x="-80.104836"
+         y="183.43842"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8145-4">haven't seen fluorescence yet, it's in this state</tspan></text>
   </g>
@@ -5329,7 +5358,7 @@
      inkscape:groupmode="layer"
      id="layer10"
      inkscape:label="5-Level_Hide_-1130MHz"
-     style="display:inline"
+     style="display:none"
      transform="translate(-30.376293,-16.771632)">
     <path
        style="display:inline;fill:none;stroke:#88419d;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Lstart-4-0-4);marker-end:url(#Arrow1Lend-8-5-5)"
@@ -6050,24 +6079,6 @@
        inkscape:connector-curvature="0"
        inkscape:export-xdpi="100.92452"
        inkscape:export-ydpi="100.92452" />
-    <path
-       transform="translate(-30.376294,-16.771632)"
-       style="display:inline;fill:none;stroke:#9ebcda;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Lstart-4-4-5-5);marker-end:url(#Arrow1Lend-8-0-5-3);enable-background:new"
-       d="M 78.62258,33.959878 V 227.83017"
-       id="path10081-3-2-7-2"
-       inkscape:connector-curvature="0"
-       inkscape:export-xdpi="100.92452"
-       inkscape:export-ydpi="100.92452"
-       sodipodi:nodetypes="cc" />
-    <path
-       transform="translate(-30.376294,-16.771632)"
-       style="display:inline;fill:none;stroke:#4d004b;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Lstart-4-2-8-1-9);marker-end:url(#Arrow1Lend-8-1-7-3-0);enable-background:new"
-       d="M 128.62258,23.748932 V 237.84176"
-       id="path10081-3-9-3-0-3"
-       inkscape:connector-curvature="0"
-       inkscape:export-xdpi="100.92452"
-       inkscape:export-ydpi="100.92452"
-       sodipodi:nodetypes="cc" />
   </g>
   <g
      inkscape:groupmode="layer"

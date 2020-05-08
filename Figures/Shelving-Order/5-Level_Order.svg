@@ -4193,11 +4193,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2"
-     inkscape:cx="236.43492"
-     inkscape:cy="372.56304"
+     inkscape:zoom="1"
+     inkscape:cx="-294.23806"
+     inkscape:cy="241.425"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer13"
+     inkscape:current-layer="layer10"
      showgrid="false"
      inkscape:window-width="3650"
      inkscape:window-height="2104"
@@ -4242,38 +4242,38 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="-248.29057"
-       y="13.934842"
+       x="-127.2437"
+       y="21.210884"
        id="text1337"
        inkscape:export-xdpi="100.92452"
        inkscape:export-ydpi="100.92452"><tspan
          sodipodi:role="line"
          id="tspan1335"
-         x="-248.29057"
-         y="13.934842"
+         x="-127.2437"
+         y="21.210884"
          style="stroke-width:0.26458332"
          dx="0 0 0 0 0 0 0 0 0 0 0.37417734">Blue-Green-Purple: Encoded</tspan><tspan
          sodipodi:role="line"
-         x="-248.29057"
-         y="27.164009"
+         x="-127.2437"
+         y="34.440052"
          style="stroke-width:0.26458332"
          dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.37417734"
          id="tspan1339">Red-Orange-Yellow: Other+Motional</tspan><tspan
          sodipodi:role="line"
-         x="-248.29057"
-         y="40.393173"
+         x="-127.2437"
+         y="47.669216"
          style="stroke-width:0.26458332"
          dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.37417734"
          id="tspan1341">Symbols: Denote which Other+Motional</tspan><tspan
          sodipodi:role="line"
-         x="-248.29057"
-         y="53.622341"
+         x="-127.2437"
+         y="60.898384"
          style="stroke-width:0.26458332"
          dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.37417734"
          id="tspan1343">is driven by which Encoded</tspan><tspan
          sodipodi:role="line"
-         x="-248.29057"
-         y="66.851509"
+         x="-127.2437"
+         y="74.127548"
          style="stroke-width:0.26458332"
          dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.37417734"
          id="tspan1345">Line Thickness: Motional Order</tspan></text>
@@ -4299,104 +4299,104 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05555534px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="-233.38033"
-       y="75.150764"
+       x="-139.45325"
+       y="87.189308"
        id="text8071-1"
        inkscape:export-xdpi="100.92452"
        inkscape:export-ydpi="100.92452"><tspan
          sodipodi:role="line"
-         x="-233.38033"
-         y="75.150764"
+         x="-139.45325"
+         y="87.189308"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8073-7">By moving the carrier frequency to -1130MHz, we've gotten rid of </tspan><tspan
          sodipodi:role="line"
-         x="-233.38033"
-         y="83.970207"
+         x="-139.45325"
+         y="96.008751"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan15195">two of the motional sidebands. Now, using swapping, we can</tspan><tspan
          sodipodi:role="line"
-         x="-233.38033"
-         y="92.78965"
+         x="-139.45325"
+         y="104.82819"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8085-1">do the entire thing without driving any motional sidebands.</tspan><tspan
          sodipodi:role="line"
-         x="-233.38033"
-         y="101.6091"
+         x="-139.45325"
+         y="113.64764"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8089-1">1: Drive 1.p1:p1 up, No others driven</tspan><tspan
          sodipodi:role="line"
-         x="-233.38033"
-         y="110.42854"
+         x="-139.45325"
+         y="122.46709"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8093-6">2: Drive 1.n1:n1 up, No others driven</tspan><tspan
          sodipodi:role="line"
-         x="-233.38033"
-         y="119.24799"
+         x="-139.45325"
+         y="131.28653"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8095-5">3: Move encoded state down into F=1, mF = -1 to avoid</tspan><tspan
          sodipodi:role="line"
-         x="-233.38033"
-         y="128.06743"
+         x="-139.45325"
+         y="140.10597"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8097-4">it being driven by next step</tspan><tspan
          sodipodi:role="line"
-         x="-233.38033"
-         y="136.88687"
+         x="-139.45325"
+         y="148.92542"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8101-9">4: Drive 2.p2:p2 up, No others driven </tspan><tspan
          sodipodi:role="line"
-         x="-233.38033"
-         y="145.70631"
+         x="-139.45325"
+         y="157.74486"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8103-2">5: Drive 2.p0:p0 up, No others driven</tspan><tspan
          sodipodi:role="line"
-         x="-233.38033"
-         y="154.52576"
+         x="-139.45325"
+         y="166.5643"
          style="font-size:5.29166651px;stroke-width:0.26458332"
-         id="tspan8105-6">5F: Fluoresce F=2, mF = -2 - don't even need to move it back </tspan><tspan
+         id="tspan8105-6">6: Fluoresce F=2, mF = -2 - don't even need to move it back </tspan><tspan
          sodipodi:role="line"
-         x="-233.38033"
-         y="163.3452"
+         x="-139.45325"
+         y="175.38374"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan15250">beforehand</tspan><tspan
          sodipodi:role="line"
-         x="-233.38033"
-         y="172.16466"
+         x="-139.45325"
+         y="184.2032"
          style="font-size:5.29166651px;stroke-width:0.26458332"
-         id="tspan8111-8">6: Drive 2.p0:p0 down, No others driven</tspan><tspan
+         id="tspan8111-8">7: Drive 2.p0:p0 down, No others driven</tspan><tspan
          sodipodi:role="line"
-         x="-233.38033"
-         y="180.9841"
+         x="-139.45325"
+         y="193.02264"
          style="font-size:5.29166651px;stroke-width:0.26458332"
-         id="tspan8113-3">6F: Fluoresce F=2, mF = 0</tspan><tspan
+         id="tspan8113-3">8: Fluoresce F=2, mF = 0</tspan><tspan
          sodipodi:role="line"
-         x="-233.38033"
-         y="189.80354"
+         x="-139.45325"
+         y="201.84209"
          style="font-size:5.29166651px;stroke-width:0.26458332"
-         id="tspan8131-3">7: Drive 2.n1:n1, No others driven</tspan><tspan
+         id="tspan8131-3">9: Drive 2.n1:n1, No others driven</tspan><tspan
          sodipodi:role="line"
-         x="-233.38033"
-         y="198.62299"
+         x="-139.45325"
+         y="210.66153"
          style="font-size:5.29166651px;stroke-width:0.26458332"
-         id="tspan8115-3">7F: Fluoresce F=1, mF = -1</tspan><tspan
+         id="tspan8115-3">10: Fluoresce F=1, mF = -1</tspan><tspan
          sodipodi:role="line"
-         x="-233.38033"
-         y="207.44243"
+         x="-139.45325"
+         y="219.48097"
          style="font-size:5.29166651px;stroke-width:0.26458332"
-         id="tspan8109-8">8: Drive 1.p1:p1, No others driven </tspan><tspan
+         id="tspan8109-8">11: Drive 1.p1:p1, No others driven </tspan><tspan
          sodipodi:role="line"
-         x="-233.38033"
-         y="216.26187"
+         x="-139.45325"
+         y="228.30042"
          style="font-size:5.29166651px;stroke-width:0.26458332"
-         id="tspan8117-4">8F: Fluoresce F=1, mF = +1</tspan><tspan
+         id="tspan8117-4">12: Fluoresce F=1, mF = +1</tspan><tspan
          sodipodi:role="line"
-         x="-233.38033"
-         y="225.08131"
+         x="-139.45325"
+         y="237.11986"
          style="font-size:5.29166651px;stroke-width:0.26458332"
-         id="tspan8119-1">9Done: Remaining shelved state is last one, if </tspan><tspan
+         id="tspan8119-1">Done: Remaining shelved state is last one, if </tspan><tspan
          sodipodi:role="line"
-         x="-233.38033"
-         y="233.90076"
+         x="-139.45325"
+         y="245.9393"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8121-4">haven't seen fluorescence yet, it's in this state</tspan></text>
     <path
@@ -4447,7 +4447,17 @@
        sodipodi:nodetypes="cc"
        inkscape:export-xdpi="100.92452"
        inkscape:export-ydpi="100.92452" />
-  </g>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4723"
+       style="fill:black;fill-opacity:1;stroke:none;font-family:Helvetica;font-style:normal;font-weight:normal;font-size:26.66666667px;line-height:1.25;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:Helvetica;font-stretch:normal;font-variant:normal"><flowRegion
+         id="flowRegion4725"><rect
+           id="rect4727"
+           width="1783"
+           height="1170"
+           x="-808"
+           y="-205.43692" /></flowRegion><flowPara
+         id="flowPara4729" /></flowRoot>  </g>
   <g
      inkscape:groupmode="layer"
      id="layer7"
@@ -5376,7 +5386,9 @@
        inkscape:path-effect="#path-effect21257-1-8"
        inkscape:original-d="m 75,-23.898406 c -3.333069,-2.65e-4 -6.666017,-2.65e-4 -10,0 2.65e-4,3.333454 2.65e-4,6.665981 0,10 -3.33349,-2.65e-4 -6.666058,-2.65e-4 -10,0 2.65e-4,-3.333942 2.65e-4,-6.667693 0,-10 -3.332307,-2.65e-4 -6.66612,-2.65e-4 -10,0 2.65e-4,3.333351 2.65e-4,6.666026 0,10 -3.333445,-2.65e-4 -6.666108,-2.65e-4 -10,0 2.65e-4,-3.333892 2.65e-4,-6.667267 0,-10 -3.332733,-2.65e-4 -6.666105,-2.65e-4 -10,0 2.65e-4,3.333366 2.65e-4,6.66603 0,10 -5.000292,-1.667117 -9.999735,-3.333598 -15,-5"
        sodipodi:nodetypes="cccccccccccc"
-       transform="matrix(0.42571503,0.42571503,-0.42178756,0.42178756,6.2910715,140.75863)" />
+       transform="matrix(0.42571503,0.42571503,-0.42178756,0.42178756,6.2910715,140.75863)"
+       inkscape:export-xdpi="100.92452"
+       inkscape:export-ydpi="100.92452" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332;enable-background:new"
@@ -5445,7 +5457,9 @@
        inkscape:path-effect="#path-effect21257-1-8-3"
        inkscape:original-d="m 75,-23.898406 c -3.333069,-2.65e-4 -6.666017,-2.65e-4 -10,0 2.65e-4,3.333454 2.65e-4,6.665981 0,10 -3.33349,-2.65e-4 -6.666058,-2.65e-4 -10,0 2.65e-4,-3.333942 2.65e-4,-6.667693 0,-10 -3.332307,-2.65e-4 -6.66612,-2.65e-4 -10,0 2.65e-4,3.333351 2.65e-4,6.666026 0,10 -3.333445,-2.65e-4 -6.666108,-2.65e-4 -10,0 2.65e-4,-3.333892 2.65e-4,-6.667267 0,-10 -3.332733,-2.65e-4 -6.666105,-2.65e-4 -10,0 2.65e-4,3.333366 2.65e-4,6.66603 0,10 -5.000292,-1.667117 -9.999735,-3.333598 -15,-5"
        sodipodi:nodetypes="cccccccccccc"
-       transform="matrix(0.42571503,0.42571503,-0.42178756,0.42178756,43.946998,200.75863)" />
+       transform="matrix(0.42571503,0.42571503,-0.42178756,0.42178756,43.946998,200.75863)"
+       inkscape:export-xdpi="100.92452"
+       inkscape:export-ydpi="100.92452" />
     <path
        style="display:inline;fill:none;stroke:#00ffe0;stroke-width:0.44220588;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker14791-5-0-4);enable-background:new"
        d="m 75,-23.898406 c -3.333069,0 -6.666017,0 -8.333009,1.666727 C 65,-20.564952 65,-17.232425 63.333255,-15.565416 c -1.666745,1.66701 -4.999313,1.66701 -6.666284,3.9e-5 C 55,-17.232348 55,-20.566099 53.333846,-22.232253 51.667693,-23.898406 48.33388,-23.898406 46.66694,-22.23173 45,-20.565055 45,-17.23238 43.333277,-15.565393 c -1.666722,1.666987 -4.999385,1.666987 -6.666331,4.1e-5 C 35,-17.232298 35,-20.565673 33.333634,-22.232039 c -1.666367,-1.666367 -4.999739,-1.666367 -6.666687,3.16e-4 C 25,-20.56504 25,-17.232376 22.499801,-16.398791 19.999602,-15.565205 15.000159,-17.231686 10,-18.898406"
@@ -5454,7 +5468,9 @@
        inkscape:path-effect="#path-effect21257-1-8-8"
        inkscape:original-d="m 75,-23.898406 c -3.333069,-2.65e-4 -6.666017,-2.65e-4 -10,0 2.65e-4,3.333454 2.65e-4,6.665981 0,10 -3.33349,-2.65e-4 -6.666058,-2.65e-4 -10,0 2.65e-4,-3.333942 2.65e-4,-6.667693 0,-10 -3.332307,-2.65e-4 -6.66612,-2.65e-4 -10,0 2.65e-4,3.333351 2.65e-4,6.666026 0,10 -3.333445,-2.65e-4 -6.666108,-2.65e-4 -10,0 2.65e-4,-3.333892 2.65e-4,-6.667267 0,-10 -3.332733,-2.65e-4 -6.666105,-2.65e-4 -10,0 2.65e-4,3.333366 2.65e-4,6.66603 0,10 -5.000292,-1.667117 -9.999735,-3.333598 -15,-5"
        sodipodi:nodetypes="cccccccccccc"
-       transform="matrix(0.42571503,0.42571503,-0.42178756,0.42178756,-31.364857,190.75863)" />
+       transform="matrix(0.42571503,0.42571503,-0.42178756,0.42178756,-31.364857,190.75863)"
+       inkscape:export-xdpi="100.92452"
+       inkscape:export-ydpi="100.92452" />
     <path
        style="display:inline;fill:none;stroke:#00ffe0;stroke-width:0.44220588;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker14791-5-0-0);enable-background:new"
        d="m 75,-23.898406 c -3.333069,0 -6.666017,0 -8.333009,1.666727 C 65,-20.564952 65,-17.232425 63.333255,-15.565416 c -1.666745,1.66701 -4.999313,1.66701 -6.666284,3.9e-5 C 55,-17.232348 55,-20.566099 53.333846,-22.232253 51.667693,-23.898406 48.33388,-23.898406 46.66694,-22.23173 45,-20.565055 45,-17.23238 43.333277,-15.565393 c -1.666722,1.666987 -4.999385,1.666987 -6.666331,4.1e-5 C 35,-17.232298 35,-20.565673 33.333634,-22.232039 c -1.666367,-1.666367 -4.999739,-1.666367 -6.666687,3.16e-4 C 25,-20.56504 25,-17.232376 22.499801,-16.398791 19.999602,-15.565205 15.000159,-17.231686 10,-18.898406"
@@ -5463,6 +5479,8 @@
        inkscape:path-effect="#path-effect21257-1-8-36"
        inkscape:original-d="m 75,-23.898406 c -3.333069,-2.65e-4 -6.666017,-2.65e-4 -10,0 2.65e-4,3.333454 2.65e-4,6.665981 0,10 -3.33349,-2.65e-4 -6.666058,-2.65e-4 -10,0 2.65e-4,-3.333942 2.65e-4,-6.667693 0,-10 -3.332307,-2.65e-4 -6.66612,-2.65e-4 -10,0 2.65e-4,3.333351 2.65e-4,6.666026 0,10 -3.333445,-2.65e-4 -6.666108,-2.65e-4 -10,0 2.65e-4,-3.333892 2.65e-4,-6.667267 0,-10 -3.332733,-2.65e-4 -6.666105,-2.65e-4 -10,0 2.65e-4,3.333366 2.65e-4,6.66603 0,10 -5.000292,-1.667117 -9.999735,-3.333598 -15,-5"
        sodipodi:nodetypes="cccccccccccc"
-       transform="matrix(-0.42571503,0.42571503,0.42178756,0.42178756,69.897657,190.75863)" />
+       transform="matrix(-0.42571503,0.42571503,0.42178756,0.42178756,69.897657,190.75863)"
+       inkscape:export-xdpi="100.92452"
+       inkscape:export-ydpi="100.92452" />
   </g>
 </svg>

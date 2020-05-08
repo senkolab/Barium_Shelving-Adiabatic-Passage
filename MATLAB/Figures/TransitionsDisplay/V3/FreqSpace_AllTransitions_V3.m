@@ -4,7 +4,7 @@ addpath('..\..\..\Functions\Frequencies_EnergyStructure', '..\..\..\altmany-expo
 Worst = false;
 MeasurementSequence = false;
 MeasurementManual = false;
-SavePDF = true;
+SavePDF = false;
 TitleDisplay = false;
 
 %3, 5, or 7
