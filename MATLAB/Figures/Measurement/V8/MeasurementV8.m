@@ -24,7 +24,7 @@ Graph7 = true;
 Graph = Graph3 || Graph5 || Graph7;
 ShowWorst = false;
 SavePDF = false;
-SavePDFName = sprintf("Measurement%s_%gMHzCarrier_%gMHzDetuning_%gHz", GeomOrientation, CarrierFreq*1e-6, Detuning*1e-6, Linewidth);
+SavePDFName = sprintf("Measurement%s_%gMHzCarrier_%gMHzDetuning_%gHz_Transparent", GeomOrientation, CarrierFreq*1e-6, Detuning*1e-6, Linewidth);
 SavePDFName = strrep(SavePDFName, ".", "p");
 
 %Setup sweep rate array
@@ -190,10 +190,17 @@ if Graph
         newtickslabel(i) = newlabel;
     end
     ax.XTickLabel = num2str(newtickslabel.');
+    h = gcf;
     set(gcf, 'Position', [100 100 600 500]);
+    set(h,'Units','Inches');
+    pos = get(h,'Position');
+    set(h,'PaperPositionMode','Auto','PaperUnits','Inches','PaperSize',[pos(3), pos(4)]);
+    set(h,'Color','none');
+    set(h, 'InvertHardCopy', 'off')
     %set(gcf, 'Renderer', 'opengl');
     %saveas(gcf, 'Overall_Measurement.pdf');
     if SavePDF
-        export_fig(SavePDFName, '-pdf', '-opengl')
+        %export_fig(SavePDFName, '-pdf', '-opengl')
+        print([SavePDFName],'-dpdf','-r0')
     end
 end

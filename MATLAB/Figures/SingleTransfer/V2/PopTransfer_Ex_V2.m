@@ -14,7 +14,7 @@ Detuning = 1.3e6;
 Linewidth = 2;
 %Fidelity
 F = 1;
-SavePDF = true;
+SavePDF = false;
 
 %Set variational global variables
 setVarGlobalsPop(GeomOrientation, CarrierFreq, Detuning, Linewidth, F);
@@ -24,14 +24,14 @@ G = getGlobalsPop();
 Sweep = logspace(8, 11, 1000);
 Sweep = Sweep.';
 
-Rabi = 10e3:1e1:200e3;
+Rabi = 10e3:10e1:200e3;
 %Rabi = 
 
 LevelsG = G.Levels3G;
 LevelsP = G.Levels3P;
 Level1 = [2 0];
 Level2 = [2 0];
-SavePDFName = sprintf("SingleTransfer_%s_%g_MHzCarrier_%gMHzDetuning_%gLinewidth_F=%i_mF=%i_Fp=%i_mFp=%i",...
+SavePDFName = sprintf("SingleTransfer_%s_%g_MHzCarrier_%gMHzDetuning_%gLinewidth_F=%i_mF=%i_Fp=%i_mFp=%i_Transparent2",...
     GeomOrientation, CarrierFreq*1e-6, Detuning*1e-6, Linewidth, Level1(1), Level1(2), Level2(1), Level2(2));
 SavePDFName = strrep(SavePDFName, ".", "p");
 [Probs, TotalTime] = TransferProbV2(G, Sweep, Rabi, 3, Level1, Level2, LevelsG, LevelsP);
@@ -51,14 +51,11 @@ RabiSweepIdealTime = [Rabi.' TotalTime(index).' ProbIdeal.'];
 
 
 %Make colormap with Rabi vs Gate Time and Fidelity as color
-fig = figure(1);
 %Smoother colors
 colormap(brewermap(4000, 'BuPu'));
 h2 = pcolor(TotalTime.'*1e3, Rabi*1e-3, Probs.');
 %No gridlines
 set(h2, 'EdgeColor', 'none');
-%Set background color white
-set(gcf,'color','white');
 %title('Optimal Sweeps', 'Fontsize', 25);
 %xlabel('Sweep Rate \alpha (MHz/ms)', 'Fontsize', 20);
 %ylabel('Rabi Frequency (kHz)', 'Fontsize', 20);
@@ -89,17 +86,26 @@ ax.Layer = 'top';
 %Add colorbar
 cb2 = colorbar;
 hold on;
+%Set background color white
+set(gcf,'color','none');
+colorTitleHandle = get(cb2,'Title');
+set(colorTitleHandle ,'String','Fidelity');
 IdealGateTimes = TotalTime(index);
 p = semilogx(IdealGateTimes*1e3, Rabi.'*1e-3, 'Color', [192, 192, 192]/255,'LineWidth',2);
 %set(p, 'Color', [128, 128, 128]);
 set(ax, 'TickDir', 'out','YGrid', 'on', 'XGrid', 'on');
 set(gcf, 'Position', [100 100 600 500]);
-colorTitleHandle = get(cb2,'Title');
-set(colorTitleHandle ,'String','Fidelity');
+h = gcf;
+set(h,'Units','Inches');
+pos = get(h,'Position');
+set(h,'PaperPositionMode','Auto','PaperUnits','Inches','PaperSize',[pos(3), pos(4)]);
+set(h,'Color','none');
+set(h, 'InvertHardCopy', 'off')
 %saveas(gcf, 'Population_Transfer_Adiabatic.pdf');
 %export_fig Population_Transfer_Adiabatic.pdf 
 if SavePDF
-    export_fig(SavePDFName, '-pdf', '-opengl')
+    %export_fig(SavePDFName, '-pdf', '-opengl')
+    print([SavePDFName],'-dpdf','-r0')
 end
 
 RabiGateTimeIdeal = [Rabi.'*1e-3 IdealGateTimes.'*1e3 ProbIdeal.' Sweep(index)];

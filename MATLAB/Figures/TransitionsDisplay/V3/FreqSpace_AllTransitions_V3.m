@@ -14,7 +14,7 @@ GeomOrientation = "XZ";
 CarrierFreq = -1130e6;
 Detuning = 1.3e6;
 G = getGlobals_V3();
-SavePDFName = sprintf("%s_%gMHz_%i-Level_%gMHz", GeomOrientation, CarrierFreq*1e-6, Levels, Detuning*1e-6);
+SavePDFName = sprintf("%s_%gMHz_%i-Level_%gMHz_Transparent", GeomOrientation, CarrierFreq*1e-6, Levels, Detuning*1e-6);
 SavePDFName = strrep(SavePDFName, ".", "p");
 
 %% Preparation - Measurement info, frequency info
@@ -199,7 +199,13 @@ l3 = legend(Leg, 'Location', 'Northeast','FontSize',14);
 %Set background color white
 set(gcf,'color','white');
 box on;
-
+h = gcf;
+set(h,'Units','Inches');
+pos = get(h,'Position');
+set(h,'PaperPositionMode','Auto','PaperUnits','Inches','PaperSize',[pos(3), pos(4)]);
+set(h,'Color','none');
+set(h, 'InvertHardCopy', 'off')
 if SavePDF
-    export_fig(SavePDFName, '-pdf', '-opengl')
+    %export_fig(SavePDFName, '-pdf', '-opengl')
+    print([SavePDFName],'-dpdf','-r0')
 end
