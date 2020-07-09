@@ -23,8 +23,8 @@ Graph5 = true;
 Graph7 = true;
 Graph = Graph3 || Graph5 || Graph7;
 ShowWorst = false;
-SavePDF = false;
-SavePDFName = sprintf("Measurement%s_%gMHzCarrier_%gMHzDetuning_%gHz_Transparent", GeomOrientation, CarrierFreq*1e-6, Detuning*1e-6, Linewidth);
+SavePDF = true;
+SavePDFName = sprintf("Measurement%s_%gMHzCarrier_%gMHzDetuning_%gHz_TransparentGridOff", GeomOrientation, CarrierFreq*1e-6, Detuning*1e-6, Linewidth);
 SavePDFName = strrep(SavePDFName, ".", "p");
 
 %Setup sweep rate array
@@ -197,6 +197,7 @@ if Graph
     set(h,'PaperPositionMode','Auto','PaperUnits','Inches','PaperSize',[pos(3), pos(4)]);
     set(h,'Color','none');
     set(h, 'InvertHardCopy', 'off')
+    grid off
     %set(gcf, 'Renderer', 'opengl');
     %saveas(gcf, 'Overall_Measurement.pdf');
     if SavePDF
