@@ -99,7 +99,7 @@ h = gcf;
 set(h,'Units','Inches');
 pos = get(h,'Position');
 set(h,'PaperPositionMode','Auto','PaperUnits','Inches','PaperSize',[pos(3), pos(4)]);
-set(h,'Color','none');
+set(h,'Color','white');
 set(h, 'InvertHardCopy', 'off')
 grid off;
 %saveas(gcf, 'Population_Transfer_Adiabatic.pdf');

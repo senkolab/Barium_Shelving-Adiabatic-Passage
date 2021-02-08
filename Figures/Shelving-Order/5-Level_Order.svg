@@ -17,7 +17,10 @@
    id="svg9321"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
    sodipodi:docname="5-Level_Order.svg"
-   style="enable-background:new">
+   style="enable-background:new"
+   inkscape:export-filename="C:\Users\brend\Desktop\Repositories\Barium_Shelving-Adiabatic-Passage\Figures\Shelving-Order\5-Level_Order.png"
+   inkscape:export-xdpi="100.92452"
+   inkscape:export-ydpi="100.92452">
   <defs
      id="defs9315">
     <inkscape:path-effect
@@ -4193,15 +4196,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="-294.23806"
-     inkscape:cy="241.425"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="246.40727"
+     inkscape:cy="473.31595"
      inkscape:document-units="mm"
      inkscape:current-layer="layer10"
      showgrid="false"
-     inkscape:window-width="3650"
+     inkscape:window-width="3654"
      inkscape:window-height="2104"
-     inkscape:window-x="174"
+     inkscape:window-x="170"
      inkscape:window-y="-16"
      inkscape:window-maximized="1" />
   <metadata
@@ -4242,37 +4245,37 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="-127.2437"
+       x="-188.09706"
        y="21.210884"
        id="text1337"
        inkscape:export-xdpi="100.92452"
        inkscape:export-ydpi="100.92452"><tspan
          sodipodi:role="line"
          id="tspan1335"
-         x="-127.2437"
+         x="-188.09706"
          y="21.210884"
          style="stroke-width:0.26458332"
          dx="0 0 0 0 0 0 0 0 0 0 0.37417734">Blue-Green-Purple: Encoded</tspan><tspan
          sodipodi:role="line"
-         x="-127.2437"
+         x="-188.09706"
          y="34.440052"
          style="stroke-width:0.26458332"
          dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.37417734"
          id="tspan1339">Red-Orange-Yellow: Other+Motional</tspan><tspan
          sodipodi:role="line"
-         x="-127.2437"
+         x="-188.09706"
          y="47.669216"
          style="stroke-width:0.26458332"
          dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.37417734"
          id="tspan1341">Symbols: Denote which Other+Motional</tspan><tspan
          sodipodi:role="line"
-         x="-127.2437"
+         x="-188.09706"
          y="60.898384"
          style="stroke-width:0.26458332"
          dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.37417734"
          id="tspan1343">is driven by which Encoded</tspan><tspan
          sodipodi:role="line"
-         x="-127.2437"
+         x="-188.09706"
          y="74.127548"
          style="stroke-width:0.26458332"
          dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.37417734"
@@ -4299,103 +4302,103 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05555534px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="-139.45325"
+       x="-200.30659"
        y="87.189308"
        id="text8071-1"
        inkscape:export-xdpi="100.92452"
        inkscape:export-ydpi="100.92452"><tspan
          sodipodi:role="line"
-         x="-139.45325"
+         x="-200.30659"
          y="87.189308"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8073-7">By moving the carrier frequency to -1130MHz, we've gotten rid of </tspan><tspan
          sodipodi:role="line"
-         x="-139.45325"
+         x="-200.30659"
          y="96.008751"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan15195">two of the motional sidebands. Now, using swapping, we can</tspan><tspan
          sodipodi:role="line"
-         x="-139.45325"
+         x="-200.30659"
          y="104.82819"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8085-1">do the entire thing without driving any motional sidebands.</tspan><tspan
          sodipodi:role="line"
-         x="-139.45325"
+         x="-200.30659"
          y="113.64764"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8089-1">1: Drive 1.p1:p1 up, No others driven</tspan><tspan
          sodipodi:role="line"
-         x="-139.45325"
+         x="-200.30659"
          y="122.46709"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8093-6">2: Drive 1.n1:n1 up, No others driven</tspan><tspan
          sodipodi:role="line"
-         x="-139.45325"
+         x="-200.30659"
          y="131.28653"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8095-5">3: Move encoded state down into F=1, mF = -1 to avoid</tspan><tspan
          sodipodi:role="line"
-         x="-139.45325"
+         x="-200.30659"
          y="140.10597"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8097-4">it being driven by next step</tspan><tspan
          sodipodi:role="line"
-         x="-139.45325"
+         x="-200.30659"
          y="148.92542"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8101-9">4: Drive 2.p2:p2 up, No others driven </tspan><tspan
          sodipodi:role="line"
-         x="-139.45325"
+         x="-200.30659"
          y="157.74486"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8103-2">5: Drive 2.p0:p0 up, No others driven</tspan><tspan
          sodipodi:role="line"
-         x="-139.45325"
+         x="-200.30659"
          y="166.5643"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8105-6">6: Fluoresce F=2, mF = -2 - don't even need to move it back </tspan><tspan
          sodipodi:role="line"
-         x="-139.45325"
+         x="-200.30659"
          y="175.38374"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan15250">beforehand</tspan><tspan
          sodipodi:role="line"
-         x="-139.45325"
+         x="-200.30659"
          y="184.2032"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8111-8">7: Drive 2.p0:p0 down, No others driven</tspan><tspan
          sodipodi:role="line"
-         x="-139.45325"
+         x="-200.30659"
          y="193.02264"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8113-3">8: Fluoresce F=2, mF = 0</tspan><tspan
          sodipodi:role="line"
-         x="-139.45325"
+         x="-200.30659"
          y="201.84209"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8131-3">9: Drive 2.n1:n1, No others driven</tspan><tspan
          sodipodi:role="line"
-         x="-139.45325"
+         x="-200.30659"
          y="210.66153"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8115-3">10: Fluoresce F=1, mF = -1</tspan><tspan
          sodipodi:role="line"
-         x="-139.45325"
+         x="-200.30659"
          y="219.48097"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8109-8">11: Drive 1.p1:p1, No others driven </tspan><tspan
          sodipodi:role="line"
-         x="-139.45325"
+         x="-200.30659"
          y="228.30042"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8117-4">12: Fluoresce F=1, mF = +1</tspan><tspan
          sodipodi:role="line"
-         x="-139.45325"
+         x="-200.30659"
          y="237.11986"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8119-1">Done: Remaining shelved state is last one, if </tspan><tspan
          sodipodi:role="line"
-         x="-139.45325"
+         x="-200.30659"
          y="245.9393"
          style="font-size:5.29166651px;stroke-width:0.26458332"
          id="tspan8121-4">haven't seen fluorescence yet, it's in this state</tspan></text>
@@ -4409,7 +4412,7 @@
        inkscape:export-ydpi="100.92452" />
     <path
        style="display:inline;fill:none;stroke:#88419d;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Lstart-4-2-7-7-5-4);marker-end:url(#Arrow1Lend-8-1-1-0-2-6);enable-background:new"
-       d="M 11.986767,97.493499 V 187.58357"
+       d="M 11.908896,97.426125 V 187.51619"
        id="path10081-3-9-2-3-0"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
@@ -4473,8 +4476,8 @@
        id="rect10230-2-4"
        width="3"
        height="3"
-       x="-19.889526"
-       y="121.05441"
+       x="-19.967398"
+       y="120.98703"
        inkscape:export-xdpi="100.92452"
        inkscape:export-ydpi="100.92452" />
     <rect
@@ -4590,9 +4593,8 @@
        inkscape:export-xdpi="100.92452"
        inkscape:export-ydpi="100.92452" />
     <path
-       transform="translate(-30.376294,-16.771632)"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.40000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;enable-background:new"
-       d="m 3.364187,189.37884 h 17.24516"
+       d="M -27.089978,172.53983 H -9.8448183"
        id="path9869-4-5-5-2-3"
        inkscape:connector-curvature="0"
        inkscape:export-xdpi="100.92452"
@@ -4647,7 +4649,7 @@
        font-style="normal"
        stroke-miterlimit="10.433"
        xml:space="preserve"
-       transform="matrix(0.69651589,0,0,-0.69651591,-126.04651,635.90843)"
+       transform="matrix(0.69651589,0,0,-0.69651591,-126.12438,635.84105)"
        id="g1123-9"
        inkscape:export-xdpi="100.92452"
        inkscape:export-ydpi="100.92452"><path
@@ -4818,9 +4820,8 @@
      inkscape:label="Excited State"
      transform="translate(27.012108,-28.759662)">
     <path
-       transform="translate(-30.376294,-16.771632)"
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.40000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;enable-background:new"
-       d="m 3.364186,95.653727 h 17.24516"
+       d="M -27.089979,78.814721 H -9.8448193"
        id="path9869-4-5-5-2"
        inkscape:connector-curvature="0"
        inkscape:export-xdpi="100.92452"
@@ -5241,14 +5242,14 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332;enable-background:new"
-       x="-0.11552268"
-       y="186.82588"
+       x="-0.19339111"
+       y="186.75853"
        id="text10189-4-5-6-0"
        inkscape:export-xdpi="100.92452"
        inkscape:export-ydpi="100.92452"><tspan
          sodipodi:role="line"
-         x="-0.11552268"
-         y="186.82588"
+         x="-0.19339111"
+         y="186.75853"
          style="stroke-width:0.26458332"
          id="tspan10209-0-9-0">3</tspan></text>
     <text
@@ -5293,14 +5294,14 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332;enable-background:new"
-       x="-7.510541"
-       y="210.76816"
+       x="-7.5884066"
+       y="210.70081"
        id="text10189-4-1-4-4"
        inkscape:export-xdpi="100.92452"
        inkscape:export-ydpi="100.92452"><tspan
          sodipodi:role="line"
-         x="-7.510541"
-         y="210.76816"
+         x="-7.5884066"
+         y="210.70081"
          style="stroke-width:0.26458332"
          id="tspan10209-3-1-7">6</tspan></text>
     <text
